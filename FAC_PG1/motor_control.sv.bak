@@ -1,0 +1,26 @@
+module motor_control (
+    input logic clk,
+    input logic [3:0] hex_speed, // 4-bit input for hexadecimal speed value
+    output logic pwm // Single PWM output for speed control
+);
+
+    int count = 0;
+    int speed = 0;
+
+    always_ff @(posedge clk) begin
+        // Map the 4-bit hex value to a speed value
+        // Assuming a linear mapping for simplicity
+        speed <= hex_speed * (50000 / 15); // Scale the hex value to the PWM range
+
+        // Counter logic
+        if (count >= 49999) begin
+            count <= 0;
+        end else begin
+            count <= count + 1;
+        end
+
+        // PWM output logic for speed control
+        pwm <= (count < speed) ? 1 : 0;
+    end
+
+endmodule

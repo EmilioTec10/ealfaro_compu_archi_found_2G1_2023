@@ -1,0 +1,52 @@
+|FAC_PG1
+clk => clk.IN1
+rst => rst.IN1
+speed[0] => speed[0].IN1
+speed[1] => speed[1].IN1
+speed[2] => speed[2].IN1
+speed[3] => speed[3].IN1
+motorSignal << motor_control:motor_control_inst.pwm
+
+
+|FAC_PG1|motor_control:motor_control_inst
+clk => pwm~reg0.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => count[8].CLK
+clk => count[9].CLK
+clk => count[10].CLK
+clk => count[11].CLK
+clk => count[12].CLK
+clk => count[13].CLK
+clk => count[14].CLK
+clk => count[15].CLK
+rst => pwm~reg0.ACLR
+rst => count[0].ACLR
+rst => count[1].ACLR
+rst => count[2].ACLR
+rst => count[3].ACLR
+rst => count[4].ACLR
+rst => count[5].ACLR
+rst => count[6].ACLR
+rst => count[7].ACLR
+rst => count[8].ACLR
+rst => count[9].ACLR
+rst => count[10].ACLR
+rst => count[11].ACLR
+rst => count[12].ACLR
+rst => count[13].ACLR
+rst => count[14].ACLR
+rst => count[15].ACLR
+hex_speed[0] => Mult0.IN15
+hex_speed[1] => Mult0.IN14
+hex_speed[2] => Mult0.IN13
+hex_speed[3] => Mult0.IN12
+pwm <= pwm~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

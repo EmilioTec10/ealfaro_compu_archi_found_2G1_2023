@@ -1,0 +1,3181 @@
+// Copyright (C) 2023  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
+
+// DATE "05/08/2024 17:55:13"
+
+// 
+// Device: Altera 5CSEMA5F31C6 Package FBGA896
+// 
+
+// 
+// This Verilog file should be used for ModelSim (SystemVerilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module FAC_PG1 (
+	clk,
+	rst,
+	speed,
+	motorSignal);
+input 	clk;
+input 	rst;
+input 	[3:0] speed;
+output 	motorSignal;
+
+// Design Ports Information
+// motorSignal	=>  Location: PIN_V18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk	=>  Location: PIN_Y27,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// rst	=>  Location: PIN_AC25,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// speed[0]	=>  Location: PIN_AD25,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// speed[1]	=>  Location: PIN_AH28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// speed[2]	=>  Location: PIN_AG27,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// speed[3]	=>  Location: PIN_AJ29,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \motor_control_inst|Mult0~24 ;
+wire \motor_control_inst|Mult0~25 ;
+wire \motor_control_inst|Mult0~26 ;
+wire \motor_control_inst|Mult0~27 ;
+wire \motor_control_inst|Mult0~28 ;
+wire \motor_control_inst|Mult0~29 ;
+wire \motor_control_inst|Mult0~30 ;
+wire \motor_control_inst|Mult0~31 ;
+wire \motor_control_inst|Mult0~32 ;
+wire \motor_control_inst|Mult0~33 ;
+wire \motor_control_inst|Mult0~34 ;
+wire \motor_control_inst|Mult0~35 ;
+wire \motor_control_inst|Mult0~36 ;
+wire \motor_control_inst|Mult0~37 ;
+wire \motor_control_inst|Mult0~38 ;
+wire \motor_control_inst|Mult0~39 ;
+wire \motor_control_inst|Mult0~40 ;
+wire \motor_control_inst|Mult0~41 ;
+wire \motor_control_inst|Mult0~42 ;
+wire \motor_control_inst|Mult0~43 ;
+wire \motor_control_inst|Mult0~44 ;
+wire \motor_control_inst|Mult0~45 ;
+wire \motor_control_inst|Mult0~46 ;
+wire \motor_control_inst|Mult0~47 ;
+wire \motor_control_inst|Mult0~48 ;
+wire \motor_control_inst|Mult0~49 ;
+wire \motor_control_inst|Mult0~50 ;
+wire \motor_control_inst|Mult0~51 ;
+wire \motor_control_inst|Mult0~52 ;
+wire \motor_control_inst|Mult0~53 ;
+wire \motor_control_inst|Mult0~54 ;
+wire \motor_control_inst|Mult0~55 ;
+wire \motor_control_inst|Mult0~56 ;
+wire \motor_control_inst|Mult0~57 ;
+wire \motor_control_inst|Mult0~58 ;
+wire \motor_control_inst|Mult0~59 ;
+wire \motor_control_inst|Mult0~60 ;
+wire \motor_control_inst|Mult0~61 ;
+wire \motor_control_inst|Mult0~62 ;
+wire \motor_control_inst|Mult0~63 ;
+wire \motor_control_inst|Mult0~64 ;
+wire \motor_control_inst|Mult0~65 ;
+wire \motor_control_inst|Mult0~66 ;
+wire \motor_control_inst|Mult0~67 ;
+wire \motor_control_inst|Mult0~68 ;
+wire \motor_control_inst|Mult0~69 ;
+wire \motor_control_inst|Mult0~70 ;
+wire \motor_control_inst|Mult0~71 ;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \clk~input_o ;
+wire \clk~inputCLKENA0_outclk ;
+wire \motor_control_inst|Add0~45_sumout ;
+wire \rst~input_o ;
+wire \motor_control_inst|LessThan0~6_combout ;
+wire \motor_control_inst|count[9]~DUPLICATE_q ;
+wire \motor_control_inst|count[3]~DUPLICATE_q ;
+wire \motor_control_inst|count[2]~DUPLICATE_q ;
+wire \motor_control_inst|LessThan0~4_combout ;
+wire \motor_control_inst|LessThan0~5_combout ;
+wire \motor_control_inst|count[19]~DUPLICATE_q ;
+wire \motor_control_inst|LessThan0~1_combout ;
+wire \motor_control_inst|count[22]~DUPLICATE_q ;
+wire \motor_control_inst|count[21]~DUPLICATE_q ;
+wire \motor_control_inst|count[20]~DUPLICATE_q ;
+wire \motor_control_inst|LessThan0~2_combout ;
+wire \motor_control_inst|LessThan0~0_combout ;
+wire \motor_control_inst|LessThan0~3_combout ;
+wire \motor_control_inst|LessThan0~7_combout ;
+wire \motor_control_inst|count[0]~DUPLICATE_q ;
+wire \motor_control_inst|Add0~46 ;
+wire \motor_control_inst|Add0~41_sumout ;
+wire \motor_control_inst|Add0~42 ;
+wire \motor_control_inst|Add0~37_sumout ;
+wire \motor_control_inst|Add0~38 ;
+wire \motor_control_inst|Add0~33_sumout ;
+wire \motor_control_inst|Add0~34 ;
+wire \motor_control_inst|Add0~61_sumout ;
+wire \motor_control_inst|Add0~62 ;
+wire \motor_control_inst|Add0~49_sumout ;
+wire \motor_control_inst|count[5]~DUPLICATE_q ;
+wire \motor_control_inst|Add0~50 ;
+wire \motor_control_inst|Add0~57_sumout ;
+wire \motor_control_inst|Add0~58 ;
+wire \motor_control_inst|Add0~53_sumout ;
+wire \motor_control_inst|count[7]~DUPLICATE_q ;
+wire \motor_control_inst|Add0~54 ;
+wire \motor_control_inst|Add0~29_sumout ;
+wire \motor_control_inst|Add0~30 ;
+wire \motor_control_inst|Add0~25_sumout ;
+wire \motor_control_inst|Add0~26 ;
+wire \motor_control_inst|Add0~21_sumout ;
+wire \motor_control_inst|Add0~22 ;
+wire \motor_control_inst|Add0~5_sumout ;
+wire \motor_control_inst|Add0~6 ;
+wire \motor_control_inst|Add0~17_sumout ;
+wire \motor_control_inst|Add0~18 ;
+wire \motor_control_inst|Add0~13_sumout ;
+wire \motor_control_inst|count[13]~DUPLICATE_q ;
+wire \motor_control_inst|Add0~14 ;
+wire \motor_control_inst|Add0~9_sumout ;
+wire \motor_control_inst|count[14]~DUPLICATE_q ;
+wire \motor_control_inst|Add0~10 ;
+wire \motor_control_inst|Add0~1_sumout ;
+wire \motor_control_inst|count[15]~DUPLICATE_q ;
+wire \motor_control_inst|Add0~2 ;
+wire \motor_control_inst|Add0~81_sumout ;
+wire \motor_control_inst|count[16]~DUPLICATE_q ;
+wire \motor_control_inst|Add0~82 ;
+wire \motor_control_inst|Add0~77_sumout ;
+wire \motor_control_inst|Add0~78 ;
+wire \motor_control_inst|Add0~73_sumout ;
+wire \motor_control_inst|count[18]~DUPLICATE_q ;
+wire \motor_control_inst|Add0~74 ;
+wire \motor_control_inst|Add0~69_sumout ;
+wire \motor_control_inst|Add0~70 ;
+wire \motor_control_inst|Add0~121_sumout ;
+wire \motor_control_inst|count[20]~feeder_combout ;
+wire \motor_control_inst|Add0~122 ;
+wire \motor_control_inst|Add0~117_sumout ;
+wire \motor_control_inst|Add0~118 ;
+wire \motor_control_inst|Add0~113_sumout ;
+wire \motor_control_inst|count[22]~feeder_combout ;
+wire \motor_control_inst|Add0~114 ;
+wire \motor_control_inst|Add0~109_sumout ;
+wire \motor_control_inst|Add0~110 ;
+wire \motor_control_inst|Add0~105_sumout ;
+wire \motor_control_inst|Add0~106 ;
+wire \motor_control_inst|Add0~65_sumout ;
+wire \motor_control_inst|Add0~66 ;
+wire \motor_control_inst|Add0~101_sumout ;
+wire \motor_control_inst|Add0~102 ;
+wire \motor_control_inst|Add0~97_sumout ;
+wire \motor_control_inst|Add0~98 ;
+wire \motor_control_inst|Add0~93_sumout ;
+wire \motor_control_inst|Add0~94 ;
+wire \motor_control_inst|Add0~89_sumout ;
+wire \motor_control_inst|Add0~90 ;
+wire \motor_control_inst|Add0~85_sumout ;
+wire \motor_control_inst|Add0~86 ;
+wire \motor_control_inst|Add0~125_sumout ;
+wire \speed[0]~input_o ;
+wire \speed[1]~input_o ;
+wire \speed[2]~input_o ;
+wire \speed[3]~input_o ;
+wire \motor_control_inst|Mult0~23 ;
+wire \motor_control_inst|Mult0~22 ;
+wire \motor_control_inst|Mult0~21 ;
+wire \motor_control_inst|Mult0~20 ;
+wire \motor_control_inst|LessThan1~0_combout ;
+wire \motor_control_inst|Mult0~19 ;
+wire \motor_control_inst|Mult0~18 ;
+wire \motor_control_inst|LessThan1~1_combout ;
+wire \motor_control_inst|Mult0~13 ;
+wire \motor_control_inst|Mult0~12 ;
+wire \motor_control_inst|Mult0~14 ;
+wire \motor_control_inst|Mult0~15 ;
+wire \motor_control_inst|LessThan1~6_combout ;
+wire \motor_control_inst|LessThan1~7_combout ;
+wire \motor_control_inst|Mult0~17 ;
+wire \motor_control_inst|LessThan1~2_combout ;
+wire \motor_control_inst|Mult0~16 ;
+wire \motor_control_inst|LessThan1~3_combout ;
+wire \motor_control_inst|Mult0~11 ;
+wire \motor_control_inst|Mult0~10 ;
+wire \motor_control_inst|Mult0~8_resulta ;
+wire \motor_control_inst|Mult0~9 ;
+wire \motor_control_inst|speed[1]~feeder_combout ;
+wire \motor_control_inst|LessThan1~4_combout ;
+wire \motor_control_inst|LessThan1~5_combout ;
+wire \motor_control_inst|LessThan1~8_combout ;
+wire \motor_control_inst|LessThan1~9_combout ;
+wire \motor_control_inst|LessThan1~10_combout ;
+wire \motor_control_inst|LessThan1~11_combout ;
+wire \motor_control_inst|LessThan1~12_combout ;
+wire \motor_control_inst|LessThan1~13_combout ;
+wire \motor_control_inst|LessThan1~14_combout ;
+wire \motor_control_inst|pwm~q ;
+wire [31:0] \motor_control_inst|count ;
+wire [31:0] \motor_control_inst|speed ;
+
+wire [63:0] \motor_control_inst|Mult0~8_RESULTA_bus ;
+
+assign \motor_control_inst|Mult0~8_resulta  = \motor_control_inst|Mult0~8_RESULTA_bus [0];
+assign \motor_control_inst|Mult0~9  = \motor_control_inst|Mult0~8_RESULTA_bus [1];
+assign \motor_control_inst|Mult0~10  = \motor_control_inst|Mult0~8_RESULTA_bus [2];
+assign \motor_control_inst|Mult0~11  = \motor_control_inst|Mult0~8_RESULTA_bus [3];
+assign \motor_control_inst|Mult0~12  = \motor_control_inst|Mult0~8_RESULTA_bus [4];
+assign \motor_control_inst|Mult0~13  = \motor_control_inst|Mult0~8_RESULTA_bus [5];
+assign \motor_control_inst|Mult0~14  = \motor_control_inst|Mult0~8_RESULTA_bus [6];
+assign \motor_control_inst|Mult0~15  = \motor_control_inst|Mult0~8_RESULTA_bus [7];
+assign \motor_control_inst|Mult0~16  = \motor_control_inst|Mult0~8_RESULTA_bus [8];
+assign \motor_control_inst|Mult0~17  = \motor_control_inst|Mult0~8_RESULTA_bus [9];
+assign \motor_control_inst|Mult0~18  = \motor_control_inst|Mult0~8_RESULTA_bus [10];
+assign \motor_control_inst|Mult0~19  = \motor_control_inst|Mult0~8_RESULTA_bus [11];
+assign \motor_control_inst|Mult0~20  = \motor_control_inst|Mult0~8_RESULTA_bus [12];
+assign \motor_control_inst|Mult0~21  = \motor_control_inst|Mult0~8_RESULTA_bus [13];
+assign \motor_control_inst|Mult0~22  = \motor_control_inst|Mult0~8_RESULTA_bus [14];
+assign \motor_control_inst|Mult0~23  = \motor_control_inst|Mult0~8_RESULTA_bus [15];
+assign \motor_control_inst|Mult0~24  = \motor_control_inst|Mult0~8_RESULTA_bus [16];
+assign \motor_control_inst|Mult0~25  = \motor_control_inst|Mult0~8_RESULTA_bus [17];
+assign \motor_control_inst|Mult0~26  = \motor_control_inst|Mult0~8_RESULTA_bus [18];
+assign \motor_control_inst|Mult0~27  = \motor_control_inst|Mult0~8_RESULTA_bus [19];
+assign \motor_control_inst|Mult0~28  = \motor_control_inst|Mult0~8_RESULTA_bus [20];
+assign \motor_control_inst|Mult0~29  = \motor_control_inst|Mult0~8_RESULTA_bus [21];
+assign \motor_control_inst|Mult0~30  = \motor_control_inst|Mult0~8_RESULTA_bus [22];
+assign \motor_control_inst|Mult0~31  = \motor_control_inst|Mult0~8_RESULTA_bus [23];
+assign \motor_control_inst|Mult0~32  = \motor_control_inst|Mult0~8_RESULTA_bus [24];
+assign \motor_control_inst|Mult0~33  = \motor_control_inst|Mult0~8_RESULTA_bus [25];
+assign \motor_control_inst|Mult0~34  = \motor_control_inst|Mult0~8_RESULTA_bus [26];
+assign \motor_control_inst|Mult0~35  = \motor_control_inst|Mult0~8_RESULTA_bus [27];
+assign \motor_control_inst|Mult0~36  = \motor_control_inst|Mult0~8_RESULTA_bus [28];
+assign \motor_control_inst|Mult0~37  = \motor_control_inst|Mult0~8_RESULTA_bus [29];
+assign \motor_control_inst|Mult0~38  = \motor_control_inst|Mult0~8_RESULTA_bus [30];
+assign \motor_control_inst|Mult0~39  = \motor_control_inst|Mult0~8_RESULTA_bus [31];
+assign \motor_control_inst|Mult0~40  = \motor_control_inst|Mult0~8_RESULTA_bus [32];
+assign \motor_control_inst|Mult0~41  = \motor_control_inst|Mult0~8_RESULTA_bus [33];
+assign \motor_control_inst|Mult0~42  = \motor_control_inst|Mult0~8_RESULTA_bus [34];
+assign \motor_control_inst|Mult0~43  = \motor_control_inst|Mult0~8_RESULTA_bus [35];
+assign \motor_control_inst|Mult0~44  = \motor_control_inst|Mult0~8_RESULTA_bus [36];
+assign \motor_control_inst|Mult0~45  = \motor_control_inst|Mult0~8_RESULTA_bus [37];
+assign \motor_control_inst|Mult0~46  = \motor_control_inst|Mult0~8_RESULTA_bus [38];
+assign \motor_control_inst|Mult0~47  = \motor_control_inst|Mult0~8_RESULTA_bus [39];
+assign \motor_control_inst|Mult0~48  = \motor_control_inst|Mult0~8_RESULTA_bus [40];
+assign \motor_control_inst|Mult0~49  = \motor_control_inst|Mult0~8_RESULTA_bus [41];
+assign \motor_control_inst|Mult0~50  = \motor_control_inst|Mult0~8_RESULTA_bus [42];
+assign \motor_control_inst|Mult0~51  = \motor_control_inst|Mult0~8_RESULTA_bus [43];
+assign \motor_control_inst|Mult0~52  = \motor_control_inst|Mult0~8_RESULTA_bus [44];
+assign \motor_control_inst|Mult0~53  = \motor_control_inst|Mult0~8_RESULTA_bus [45];
+assign \motor_control_inst|Mult0~54  = \motor_control_inst|Mult0~8_RESULTA_bus [46];
+assign \motor_control_inst|Mult0~55  = \motor_control_inst|Mult0~8_RESULTA_bus [47];
+assign \motor_control_inst|Mult0~56  = \motor_control_inst|Mult0~8_RESULTA_bus [48];
+assign \motor_control_inst|Mult0~57  = \motor_control_inst|Mult0~8_RESULTA_bus [49];
+assign \motor_control_inst|Mult0~58  = \motor_control_inst|Mult0~8_RESULTA_bus [50];
+assign \motor_control_inst|Mult0~59  = \motor_control_inst|Mult0~8_RESULTA_bus [51];
+assign \motor_control_inst|Mult0~60  = \motor_control_inst|Mult0~8_RESULTA_bus [52];
+assign \motor_control_inst|Mult0~61  = \motor_control_inst|Mult0~8_RESULTA_bus [53];
+assign \motor_control_inst|Mult0~62  = \motor_control_inst|Mult0~8_RESULTA_bus [54];
+assign \motor_control_inst|Mult0~63  = \motor_control_inst|Mult0~8_RESULTA_bus [55];
+assign \motor_control_inst|Mult0~64  = \motor_control_inst|Mult0~8_RESULTA_bus [56];
+assign \motor_control_inst|Mult0~65  = \motor_control_inst|Mult0~8_RESULTA_bus [57];
+assign \motor_control_inst|Mult0~66  = \motor_control_inst|Mult0~8_RESULTA_bus [58];
+assign \motor_control_inst|Mult0~67  = \motor_control_inst|Mult0~8_RESULTA_bus [59];
+assign \motor_control_inst|Mult0~68  = \motor_control_inst|Mult0~8_RESULTA_bus [60];
+assign \motor_control_inst|Mult0~69  = \motor_control_inst|Mult0~8_RESULTA_bus [61];
+assign \motor_control_inst|Mult0~70  = \motor_control_inst|Mult0~8_RESULTA_bus [62];
+assign \motor_control_inst|Mult0~71  = \motor_control_inst|Mult0~8_RESULTA_bus [63];
+
+// Location: IOOBUF_X80_Y0_N2
+cyclonev_io_obuf \motorSignal~output (
+	.i(\motor_control_inst|pwm~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(motorSignal),
+	.obar());
+// synopsys translate_off
+defparam \motorSignal~output .bus_hold = "false";
+defparam \motorSignal~output .open_drain_output = "false";
+defparam \motorSignal~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y25_N21
+cyclonev_io_ibuf \clk~input (
+	.i(clk),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\clk~input_o ));
+// synopsys translate_off
+defparam \clk~input .bus_hold = "false";
+defparam \clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G10
+cyclonev_clkena \clk~inputCLKENA0 (
+	.inclk(\clk~input_o ),
+	.ena(vcc),
+	.outclk(\clk~inputCLKENA0_outclk ),
+	.enaout());
+// synopsys translate_off
+defparam \clk~inputCLKENA0 .clock_type = "global clock";
+defparam \clk~inputCLKENA0 .disable_mode = "low";
+defparam \clk~inputCLKENA0 .ena_register_mode = "always enabled";
+defparam \clk~inputCLKENA0 .ena_register_power_up = "high";
+defparam \clk~inputCLKENA0 .test_syn = "high";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N0
+cyclonev_lcell_comb \motor_control_inst|Add0~45 (
+// Equation(s):
+// \motor_control_inst|Add0~45_sumout  = SUM(( \motor_control_inst|count[0]~DUPLICATE_q  ) + ( VCC ) + ( !VCC ))
+// \motor_control_inst|Add0~46  = CARRY(( \motor_control_inst|count[0]~DUPLICATE_q  ) + ( VCC ) + ( !VCC ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count[0]~DUPLICATE_q ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~45_sumout ),
+	.cout(\motor_control_inst|Add0~46 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~45 .extended_lut = "off";
+defparam \motor_control_inst|Add0~45 .lut_mask = 64'h00000000000000FF;
+defparam \motor_control_inst|Add0~45 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y4_N61
+cyclonev_io_ibuf \rst~input (
+	.i(rst),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\rst~input_o ));
+// synopsys translate_off
+defparam \rst~input .bus_hold = "false";
+defparam \rst~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N40
+dffeas \motor_control_inst|count[13] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~13_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [13]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[13] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[13] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y3_N0
+cyclonev_lcell_comb \motor_control_inst|LessThan0~6 (
+// Equation(s):
+// \motor_control_inst|LessThan0~6_combout  = ( !\motor_control_inst|count [10] & ( !\motor_control_inst|count [13] & ( (!\motor_control_inst|count [11] & !\motor_control_inst|count [12]) ) ) )
+
+	.dataa(gnd),
+	.datab(!\motor_control_inst|count [11]),
+	.datac(!\motor_control_inst|count [12]),
+	.datad(gnd),
+	.datae(!\motor_control_inst|count [10]),
+	.dataf(!\motor_control_inst|count [13]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan0~6_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan0~6 .extended_lut = "off";
+defparam \motor_control_inst|LessThan0~6 .lut_mask = 64'hC0C0000000000000;
+defparam \motor_control_inst|LessThan0~6 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N46
+dffeas \motor_control_inst|count[15] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~1_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [15]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[15] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[15] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N22
+dffeas \motor_control_inst|count[7] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~53_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[7] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[7] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N28
+dffeas \motor_control_inst|count[9]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~25_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[9]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[9]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[9]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N10
+dffeas \motor_control_inst|count[3]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~33_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[3]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[3]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[3]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N8
+dffeas \motor_control_inst|count[2]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~37_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[2]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[2]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[2]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N16
+dffeas \motor_control_inst|count[5] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~49_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[5] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[5] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N1
+dffeas \motor_control_inst|count[0] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~45_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[0] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[0] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y3_N12
+cyclonev_lcell_comb \motor_control_inst|LessThan0~4 (
+// Equation(s):
+// \motor_control_inst|LessThan0~4_combout  = ( \motor_control_inst|count [0] & ( \motor_control_inst|count [1] & ( (!\motor_control_inst|count [5] & (!\motor_control_inst|count [4] & ((!\motor_control_inst|count[3]~DUPLICATE_q ) # 
+// (!\motor_control_inst|count[2]~DUPLICATE_q )))) ) ) ) # ( !\motor_control_inst|count [0] & ( \motor_control_inst|count [1] & ( (!\motor_control_inst|count [5] & !\motor_control_inst|count [4]) ) ) ) # ( \motor_control_inst|count [0] & ( 
+// !\motor_control_inst|count [1] & ( (!\motor_control_inst|count [5] & !\motor_control_inst|count [4]) ) ) ) # ( !\motor_control_inst|count [0] & ( !\motor_control_inst|count [1] & ( (!\motor_control_inst|count [5] & !\motor_control_inst|count [4]) ) ) )
+
+	.dataa(!\motor_control_inst|count[3]~DUPLICATE_q ),
+	.datab(!\motor_control_inst|count[2]~DUPLICATE_q ),
+	.datac(!\motor_control_inst|count [5]),
+	.datad(!\motor_control_inst|count [4]),
+	.datae(!\motor_control_inst|count [0]),
+	.dataf(!\motor_control_inst|count [1]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan0~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan0~4 .extended_lut = "off";
+defparam \motor_control_inst|LessThan0~4 .lut_mask = 64'hF000F000F000E000;
+defparam \motor_control_inst|LessThan0~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y3_N54
+cyclonev_lcell_comb \motor_control_inst|LessThan0~5 (
+// Equation(s):
+// \motor_control_inst|LessThan0~5_combout  = ( \motor_control_inst|count [8] & ( \motor_control_inst|LessThan0~4_combout  & ( (\motor_control_inst|count [7] & \motor_control_inst|count[9]~DUPLICATE_q ) ) ) ) # ( \motor_control_inst|count [8] & ( 
+// !\motor_control_inst|LessThan0~4_combout  & ( (\motor_control_inst|count[9]~DUPLICATE_q  & ((\motor_control_inst|count [6]) # (\motor_control_inst|count [7]))) ) ) )
+
+	.dataa(!\motor_control_inst|count [7]),
+	.datab(!\motor_control_inst|count [6]),
+	.datac(!\motor_control_inst|count[9]~DUPLICATE_q ),
+	.datad(gnd),
+	.datae(!\motor_control_inst|count [8]),
+	.dataf(!\motor_control_inst|LessThan0~4_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan0~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan0~5 .extended_lut = "off";
+defparam \motor_control_inst|LessThan0~5 .lut_mask = 64'h0000070700000505;
+defparam \motor_control_inst|LessThan0~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N58
+dffeas \motor_control_inst|count[19]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~69_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[19]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[19]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[19]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y3_N48
+cyclonev_lcell_comb \motor_control_inst|LessThan0~1 (
+// Equation(s):
+// \motor_control_inst|LessThan0~1_combout  = ( !\motor_control_inst|count [29] & ( !\motor_control_inst|count [26] & ( (!\motor_control_inst|count [27] & (!\motor_control_inst|count [28] & !\motor_control_inst|count [30])) ) ) )
+
+	.dataa(!\motor_control_inst|count [27]),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count [28]),
+	.datad(!\motor_control_inst|count [30]),
+	.datae(!\motor_control_inst|count [29]),
+	.dataf(!\motor_control_inst|count [26]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan0~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan0~1 .extended_lut = "off";
+defparam \motor_control_inst|LessThan0~1 .lut_mask = 64'hA000000000000000;
+defparam \motor_control_inst|LessThan0~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X81_Y3_N50
+dffeas \motor_control_inst|count[22]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|count[22]~feeder_combout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[22]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[22]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[22]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X81_Y3_N32
+dffeas \motor_control_inst|count[21]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Add0~117_sumout ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[21]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[21]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[21]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X81_Y3_N38
+dffeas \motor_control_inst|count[20]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|count[20]~feeder_combout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[20]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[20]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[20]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y3_N45
+cyclonev_lcell_comb \motor_control_inst|LessThan0~2 (
+// Equation(s):
+// \motor_control_inst|LessThan0~2_combout  = ( !\motor_control_inst|count [23] & ( !\motor_control_inst|count [24] & ( (!\motor_control_inst|count[22]~DUPLICATE_q  & (!\motor_control_inst|count[21]~DUPLICATE_q  & !\motor_control_inst|count[20]~DUPLICATE_q 
+// )) ) ) )
+
+	.dataa(!\motor_control_inst|count[22]~DUPLICATE_q ),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count[21]~DUPLICATE_q ),
+	.datad(!\motor_control_inst|count[20]~DUPLICATE_q ),
+	.datae(!\motor_control_inst|count [23]),
+	.dataf(!\motor_control_inst|count [24]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan0~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan0~2 .extended_lut = "off";
+defparam \motor_control_inst|LessThan0~2 .lut_mask = 64'hA000000000000000;
+defparam \motor_control_inst|LessThan0~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X81_Y3_N11
+dffeas \motor_control_inst|count[16] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Add0~81_sumout ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [16]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[16] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[16] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X81_Y3_N17
+dffeas \motor_control_inst|count[18] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Add0~73_sumout ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [18]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[18] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[18] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y3_N6
+cyclonev_lcell_comb \motor_control_inst|LessThan0~0 (
+// Equation(s):
+// \motor_control_inst|LessThan0~0_combout  = ( !\motor_control_inst|count [17] & ( (!\motor_control_inst|count [16] & !\motor_control_inst|count [18]) ) )
+
+	.dataa(gnd),
+	.datab(!\motor_control_inst|count [16]),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count [18]),
+	.datae(!\motor_control_inst|count [17]),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan0~0 .extended_lut = "off";
+defparam \motor_control_inst|LessThan0~0 .lut_mask = 64'hCC000000CC000000;
+defparam \motor_control_inst|LessThan0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y3_N24
+cyclonev_lcell_comb \motor_control_inst|LessThan0~3 (
+// Equation(s):
+// \motor_control_inst|LessThan0~3_combout  = ( \motor_control_inst|LessThan0~2_combout  & ( \motor_control_inst|LessThan0~0_combout  & ( (!\motor_control_inst|count [25] & (!\motor_control_inst|count[19]~DUPLICATE_q  & 
+// \motor_control_inst|LessThan0~1_combout )) ) ) )
+
+	.dataa(!\motor_control_inst|count [25]),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count[19]~DUPLICATE_q ),
+	.datad(!\motor_control_inst|LessThan0~1_combout ),
+	.datae(!\motor_control_inst|LessThan0~2_combout ),
+	.dataf(!\motor_control_inst|LessThan0~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan0~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan0~3 .extended_lut = "off";
+defparam \motor_control_inst|LessThan0~3 .lut_mask = 64'h00000000000000A0;
+defparam \motor_control_inst|LessThan0~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y3_N18
+cyclonev_lcell_comb \motor_control_inst|LessThan0~7 (
+// Equation(s):
+// \motor_control_inst|LessThan0~7_combout  = ( \motor_control_inst|LessThan0~5_combout  & ( \motor_control_inst|LessThan0~3_combout  & ( (\motor_control_inst|count [15] & (!\motor_control_inst|count [31] & \motor_control_inst|count[14]~DUPLICATE_q )) ) ) ) 
+// # ( !\motor_control_inst|LessThan0~5_combout  & ( \motor_control_inst|LessThan0~3_combout  & ( (!\motor_control_inst|LessThan0~6_combout  & (\motor_control_inst|count [15] & (!\motor_control_inst|count [31] & \motor_control_inst|count[14]~DUPLICATE_q ))) 
+// ) ) ) # ( \motor_control_inst|LessThan0~5_combout  & ( !\motor_control_inst|LessThan0~3_combout  & ( !\motor_control_inst|count [31] ) ) ) # ( !\motor_control_inst|LessThan0~5_combout  & ( !\motor_control_inst|LessThan0~3_combout  & ( 
+// !\motor_control_inst|count [31] ) ) )
+
+	.dataa(!\motor_control_inst|LessThan0~6_combout ),
+	.datab(!\motor_control_inst|count [15]),
+	.datac(!\motor_control_inst|count [31]),
+	.datad(!\motor_control_inst|count[14]~DUPLICATE_q ),
+	.datae(!\motor_control_inst|LessThan0~5_combout ),
+	.dataf(!\motor_control_inst|LessThan0~3_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan0~7_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan0~7 .extended_lut = "off";
+defparam \motor_control_inst|LessThan0~7 .lut_mask = 64'hF0F0F0F000200030;
+defparam \motor_control_inst|LessThan0~7 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N2
+dffeas \motor_control_inst|count[0]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~45_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[0]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[0]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[0]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N3
+cyclonev_lcell_comb \motor_control_inst|Add0~41 (
+// Equation(s):
+// \motor_control_inst|Add0~41_sumout  = SUM(( \motor_control_inst|count [1] ) + ( GND ) + ( \motor_control_inst|Add0~46  ))
+// \motor_control_inst|Add0~42  = CARRY(( \motor_control_inst|count [1] ) + ( GND ) + ( \motor_control_inst|Add0~46  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count [1]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~46 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~41_sumout ),
+	.cout(\motor_control_inst|Add0~42 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~41 .extended_lut = "off";
+defparam \motor_control_inst|Add0~41 .lut_mask = 64'h0000FFFF000000FF;
+defparam \motor_control_inst|Add0~41 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N5
+dffeas \motor_control_inst|count[1] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~41_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[1] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[1] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N6
+cyclonev_lcell_comb \motor_control_inst|Add0~37 (
+// Equation(s):
+// \motor_control_inst|Add0~37_sumout  = SUM(( \motor_control_inst|count [2] ) + ( GND ) + ( \motor_control_inst|Add0~42  ))
+// \motor_control_inst|Add0~38  = CARRY(( \motor_control_inst|count [2] ) + ( GND ) + ( \motor_control_inst|Add0~42  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count [2]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~42 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~37_sumout ),
+	.cout(\motor_control_inst|Add0~38 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~37 .extended_lut = "off";
+defparam \motor_control_inst|Add0~37 .lut_mask = 64'h0000FFFF000000FF;
+defparam \motor_control_inst|Add0~37 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N7
+dffeas \motor_control_inst|count[2] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~37_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[2] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[2] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N9
+cyclonev_lcell_comb \motor_control_inst|Add0~33 (
+// Equation(s):
+// \motor_control_inst|Add0~33_sumout  = SUM(( \motor_control_inst|count [3] ) + ( GND ) + ( \motor_control_inst|Add0~38  ))
+// \motor_control_inst|Add0~34  = CARRY(( \motor_control_inst|count [3] ) + ( GND ) + ( \motor_control_inst|Add0~38  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count [3]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~38 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~33_sumout ),
+	.cout(\motor_control_inst|Add0~34 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~33 .extended_lut = "off";
+defparam \motor_control_inst|Add0~33 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \motor_control_inst|Add0~33 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N11
+dffeas \motor_control_inst|count[3] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~33_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[3] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[3] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N12
+cyclonev_lcell_comb \motor_control_inst|Add0~61 (
+// Equation(s):
+// \motor_control_inst|Add0~61_sumout  = SUM(( \motor_control_inst|count [4] ) + ( GND ) + ( \motor_control_inst|Add0~34  ))
+// \motor_control_inst|Add0~62  = CARRY(( \motor_control_inst|count [4] ) + ( GND ) + ( \motor_control_inst|Add0~34  ))
+
+	.dataa(gnd),
+	.datab(!\motor_control_inst|count [4]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~34 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~61_sumout ),
+	.cout(\motor_control_inst|Add0~62 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~61 .extended_lut = "off";
+defparam \motor_control_inst|Add0~61 .lut_mask = 64'h0000FFFF00003333;
+defparam \motor_control_inst|Add0~61 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N14
+dffeas \motor_control_inst|count[4] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~61_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[4] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[4] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N15
+cyclonev_lcell_comb \motor_control_inst|Add0~49 (
+// Equation(s):
+// \motor_control_inst|Add0~49_sumout  = SUM(( \motor_control_inst|count[5]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~62  ))
+// \motor_control_inst|Add0~50  = CARRY(( \motor_control_inst|count[5]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~62  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count[5]~DUPLICATE_q ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~62 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~49_sumout ),
+	.cout(\motor_control_inst|Add0~50 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~49 .extended_lut = "off";
+defparam \motor_control_inst|Add0~49 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \motor_control_inst|Add0~49 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N17
+dffeas \motor_control_inst|count[5]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~49_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[5]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[5]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[5]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N18
+cyclonev_lcell_comb \motor_control_inst|Add0~57 (
+// Equation(s):
+// \motor_control_inst|Add0~57_sumout  = SUM(( \motor_control_inst|count [6] ) + ( GND ) + ( \motor_control_inst|Add0~50  ))
+// \motor_control_inst|Add0~58  = CARRY(( \motor_control_inst|count [6] ) + ( GND ) + ( \motor_control_inst|Add0~50  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count [6]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~50 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~57_sumout ),
+	.cout(\motor_control_inst|Add0~58 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~57 .extended_lut = "off";
+defparam \motor_control_inst|Add0~57 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \motor_control_inst|Add0~57 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N20
+dffeas \motor_control_inst|count[6] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~57_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[6] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[6] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N21
+cyclonev_lcell_comb \motor_control_inst|Add0~53 (
+// Equation(s):
+// \motor_control_inst|Add0~53_sumout  = SUM(( \motor_control_inst|count[7]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~58  ))
+// \motor_control_inst|Add0~54  = CARRY(( \motor_control_inst|count[7]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~58  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count[7]~DUPLICATE_q ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~58 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~53_sumout ),
+	.cout(\motor_control_inst|Add0~54 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~53 .extended_lut = "off";
+defparam \motor_control_inst|Add0~53 .lut_mask = 64'h0000FFFF000000FF;
+defparam \motor_control_inst|Add0~53 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N23
+dffeas \motor_control_inst|count[7]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~53_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[7]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[7]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[7]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N24
+cyclonev_lcell_comb \motor_control_inst|Add0~29 (
+// Equation(s):
+// \motor_control_inst|Add0~29_sumout  = SUM(( \motor_control_inst|count [8] ) + ( GND ) + ( \motor_control_inst|Add0~54  ))
+// \motor_control_inst|Add0~30  = CARRY(( \motor_control_inst|count [8] ) + ( GND ) + ( \motor_control_inst|Add0~54  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count [8]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~54 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~29_sumout ),
+	.cout(\motor_control_inst|Add0~30 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~29 .extended_lut = "off";
+defparam \motor_control_inst|Add0~29 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \motor_control_inst|Add0~29 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N26
+dffeas \motor_control_inst|count[8] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~29_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [8]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[8] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[8] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N27
+cyclonev_lcell_comb \motor_control_inst|Add0~25 (
+// Equation(s):
+// \motor_control_inst|Add0~25_sumout  = SUM(( \motor_control_inst|count [9] ) + ( GND ) + ( \motor_control_inst|Add0~30  ))
+// \motor_control_inst|Add0~26  = CARRY(( \motor_control_inst|count [9] ) + ( GND ) + ( \motor_control_inst|Add0~30  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count [9]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~30 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~25_sumout ),
+	.cout(\motor_control_inst|Add0~26 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~25 .extended_lut = "off";
+defparam \motor_control_inst|Add0~25 .lut_mask = 64'h0000FFFF000000FF;
+defparam \motor_control_inst|Add0~25 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N29
+dffeas \motor_control_inst|count[9] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~25_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [9]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[9] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[9] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N30
+cyclonev_lcell_comb \motor_control_inst|Add0~21 (
+// Equation(s):
+// \motor_control_inst|Add0~21_sumout  = SUM(( \motor_control_inst|count [10] ) + ( GND ) + ( \motor_control_inst|Add0~26  ))
+// \motor_control_inst|Add0~22  = CARRY(( \motor_control_inst|count [10] ) + ( GND ) + ( \motor_control_inst|Add0~26  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count [10]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~26 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~21_sumout ),
+	.cout(\motor_control_inst|Add0~22 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~21 .extended_lut = "off";
+defparam \motor_control_inst|Add0~21 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \motor_control_inst|Add0~21 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N31
+dffeas \motor_control_inst|count[10] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~21_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [10]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[10] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[10] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N33
+cyclonev_lcell_comb \motor_control_inst|Add0~5 (
+// Equation(s):
+// \motor_control_inst|Add0~5_sumout  = SUM(( \motor_control_inst|count [11] ) + ( GND ) + ( \motor_control_inst|Add0~22  ))
+// \motor_control_inst|Add0~6  = CARRY(( \motor_control_inst|count [11] ) + ( GND ) + ( \motor_control_inst|Add0~22  ))
+
+	.dataa(!\motor_control_inst|count [11]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~22 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~5_sumout ),
+	.cout(\motor_control_inst|Add0~6 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~5 .extended_lut = "off";
+defparam \motor_control_inst|Add0~5 .lut_mask = 64'h0000FFFF00005555;
+defparam \motor_control_inst|Add0~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N35
+dffeas \motor_control_inst|count[11] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~5_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [11]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[11] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[11] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N36
+cyclonev_lcell_comb \motor_control_inst|Add0~17 (
+// Equation(s):
+// \motor_control_inst|Add0~17_sumout  = SUM(( \motor_control_inst|count [12] ) + ( GND ) + ( \motor_control_inst|Add0~6  ))
+// \motor_control_inst|Add0~18  = CARRY(( \motor_control_inst|count [12] ) + ( GND ) + ( \motor_control_inst|Add0~6  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count [12]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~6 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~17_sumout ),
+	.cout(\motor_control_inst|Add0~18 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~17 .extended_lut = "off";
+defparam \motor_control_inst|Add0~17 .lut_mask = 64'h0000FFFF000000FF;
+defparam \motor_control_inst|Add0~17 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N38
+dffeas \motor_control_inst|count[12] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~17_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [12]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[12] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[12] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N39
+cyclonev_lcell_comb \motor_control_inst|Add0~13 (
+// Equation(s):
+// \motor_control_inst|Add0~13_sumout  = SUM(( \motor_control_inst|count[13]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~18  ))
+// \motor_control_inst|Add0~14  = CARRY(( \motor_control_inst|count[13]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~18  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count[13]~DUPLICATE_q ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~18 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~13_sumout ),
+	.cout(\motor_control_inst|Add0~14 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~13 .extended_lut = "off";
+defparam \motor_control_inst|Add0~13 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \motor_control_inst|Add0~13 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N41
+dffeas \motor_control_inst|count[13]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~13_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[13]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[13]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[13]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N42
+cyclonev_lcell_comb \motor_control_inst|Add0~9 (
+// Equation(s):
+// \motor_control_inst|Add0~9_sumout  = SUM(( \motor_control_inst|count[14]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~14  ))
+// \motor_control_inst|Add0~10  = CARRY(( \motor_control_inst|count[14]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~14  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count[14]~DUPLICATE_q ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~14 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~9_sumout ),
+	.cout(\motor_control_inst|Add0~10 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~9 .extended_lut = "off";
+defparam \motor_control_inst|Add0~9 .lut_mask = 64'h0000FFFF000000FF;
+defparam \motor_control_inst|Add0~9 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N43
+dffeas \motor_control_inst|count[14]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~9_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[14]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[14]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[14]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N45
+cyclonev_lcell_comb \motor_control_inst|Add0~1 (
+// Equation(s):
+// \motor_control_inst|Add0~1_sumout  = SUM(( \motor_control_inst|count[15]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~10  ))
+// \motor_control_inst|Add0~2  = CARRY(( \motor_control_inst|count[15]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~10  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count[15]~DUPLICATE_q ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~10 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~1_sumout ),
+	.cout(\motor_control_inst|Add0~2 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~1 .extended_lut = "off";
+defparam \motor_control_inst|Add0~1 .lut_mask = 64'h0000FFFF000000FF;
+defparam \motor_control_inst|Add0~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N47
+dffeas \motor_control_inst|count[15]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~1_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[15]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[15]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[15]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N48
+cyclonev_lcell_comb \motor_control_inst|Add0~81 (
+// Equation(s):
+// \motor_control_inst|Add0~81_sumout  = SUM(( \motor_control_inst|count[16]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~2  ))
+// \motor_control_inst|Add0~82  = CARRY(( \motor_control_inst|count[16]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~2  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count[16]~DUPLICATE_q ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~2 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~81_sumout ),
+	.cout(\motor_control_inst|Add0~82 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~81 .extended_lut = "off";
+defparam \motor_control_inst|Add0~81 .lut_mask = 64'h0000FFFF000000FF;
+defparam \motor_control_inst|Add0~81 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X81_Y3_N10
+dffeas \motor_control_inst|count[16]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Add0~81_sumout ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[16]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[16]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[16]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N51
+cyclonev_lcell_comb \motor_control_inst|Add0~77 (
+// Equation(s):
+// \motor_control_inst|Add0~77_sumout  = SUM(( \motor_control_inst|count [17] ) + ( GND ) + ( \motor_control_inst|Add0~82  ))
+// \motor_control_inst|Add0~78  = CARRY(( \motor_control_inst|count [17] ) + ( GND ) + ( \motor_control_inst|Add0~82  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count [17]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~82 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~77_sumout ),
+	.cout(\motor_control_inst|Add0~78 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~77 .extended_lut = "off";
+defparam \motor_control_inst|Add0~77 .lut_mask = 64'h0000FFFF000000FF;
+defparam \motor_control_inst|Add0~77 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N52
+dffeas \motor_control_inst|count[17] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~77_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [17]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[17] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[17] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N54
+cyclonev_lcell_comb \motor_control_inst|Add0~73 (
+// Equation(s):
+// \motor_control_inst|Add0~73_sumout  = SUM(( \motor_control_inst|count[18]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~78  ))
+// \motor_control_inst|Add0~74  = CARRY(( \motor_control_inst|count[18]~DUPLICATE_q  ) + ( GND ) + ( \motor_control_inst|Add0~78  ))
+
+	.dataa(gnd),
+	.datab(!\motor_control_inst|count[18]~DUPLICATE_q ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~78 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~73_sumout ),
+	.cout(\motor_control_inst|Add0~74 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~73 .extended_lut = "off";
+defparam \motor_control_inst|Add0~73 .lut_mask = 64'h0000FFFF00003333;
+defparam \motor_control_inst|Add0~73 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X81_Y3_N16
+dffeas \motor_control_inst|count[18]~DUPLICATE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Add0~73_sumout ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count[18]~DUPLICATE_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[18]~DUPLICATE .is_wysiwyg = "true";
+defparam \motor_control_inst|count[18]~DUPLICATE .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y4_N57
+cyclonev_lcell_comb \motor_control_inst|Add0~69 (
+// Equation(s):
+// \motor_control_inst|Add0~69_sumout  = SUM(( \motor_control_inst|count [19] ) + ( GND ) + ( \motor_control_inst|Add0~74  ))
+// \motor_control_inst|Add0~70  = CARRY(( \motor_control_inst|count [19] ) + ( GND ) + ( \motor_control_inst|Add0~74  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count [19]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~74 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~69_sumout ),
+	.cout(\motor_control_inst|Add0~70 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~69 .extended_lut = "off";
+defparam \motor_control_inst|Add0~69 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \motor_control_inst|Add0~69 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N59
+dffeas \motor_control_inst|count[19] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~69_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [19]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[19] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[19] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y3_N0
+cyclonev_lcell_comb \motor_control_inst|Add0~121 (
+// Equation(s):
+// \motor_control_inst|Add0~121_sumout  = SUM(( \motor_control_inst|count [20] ) + ( GND ) + ( \motor_control_inst|Add0~70  ))
+// \motor_control_inst|Add0~122  = CARRY(( \motor_control_inst|count [20] ) + ( GND ) + ( \motor_control_inst|Add0~70  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count [20]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~70 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~121_sumout ),
+	.cout(\motor_control_inst|Add0~122 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~121 .extended_lut = "off";
+defparam \motor_control_inst|Add0~121 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \motor_control_inst|Add0~121 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y3_N36
+cyclonev_lcell_comb \motor_control_inst|count[20]~feeder (
+// Equation(s):
+// \motor_control_inst|count[20]~feeder_combout  = ( \motor_control_inst|Add0~121_sumout  )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\motor_control_inst|Add0~121_sumout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|count[20]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|count[20]~feeder .extended_lut = "off";
+defparam \motor_control_inst|count[20]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \motor_control_inst|count[20]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X81_Y3_N37
+dffeas \motor_control_inst|count[20] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|count[20]~feeder_combout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [20]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[20] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[20] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y3_N3
+cyclonev_lcell_comb \motor_control_inst|Add0~117 (
+// Equation(s):
+// \motor_control_inst|Add0~117_sumout  = SUM(( \motor_control_inst|count [21] ) + ( GND ) + ( \motor_control_inst|Add0~122  ))
+// \motor_control_inst|Add0~118  = CARRY(( \motor_control_inst|count [21] ) + ( GND ) + ( \motor_control_inst|Add0~122  ))
+
+	.dataa(!\motor_control_inst|count [21]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~122 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~117_sumout ),
+	.cout(\motor_control_inst|Add0~118 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~117 .extended_lut = "off";
+defparam \motor_control_inst|Add0~117 .lut_mask = 64'h0000FFFF00005555;
+defparam \motor_control_inst|Add0~117 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X81_Y3_N31
+dffeas \motor_control_inst|count[21] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Add0~117_sumout ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [21]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[21] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[21] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y3_N6
+cyclonev_lcell_comb \motor_control_inst|Add0~113 (
+// Equation(s):
+// \motor_control_inst|Add0~113_sumout  = SUM(( \motor_control_inst|count [22] ) + ( GND ) + ( \motor_control_inst|Add0~118  ))
+// \motor_control_inst|Add0~114  = CARRY(( \motor_control_inst|count [22] ) + ( GND ) + ( \motor_control_inst|Add0~118  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count [22]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~118 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~113_sumout ),
+	.cout(\motor_control_inst|Add0~114 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~113 .extended_lut = "off";
+defparam \motor_control_inst|Add0~113 .lut_mask = 64'h0000FFFF000000FF;
+defparam \motor_control_inst|Add0~113 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y3_N48
+cyclonev_lcell_comb \motor_control_inst|count[22]~feeder (
+// Equation(s):
+// \motor_control_inst|count[22]~feeder_combout  = ( \motor_control_inst|Add0~113_sumout  )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\motor_control_inst|Add0~113_sumout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|count[22]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|count[22]~feeder .extended_lut = "off";
+defparam \motor_control_inst|count[22]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \motor_control_inst|count[22]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X81_Y3_N49
+dffeas \motor_control_inst|count[22] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|count[22]~feeder_combout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [22]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[22] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[22] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y3_N9
+cyclonev_lcell_comb \motor_control_inst|Add0~109 (
+// Equation(s):
+// \motor_control_inst|Add0~109_sumout  = SUM(( \motor_control_inst|count [23] ) + ( GND ) + ( \motor_control_inst|Add0~114  ))
+// \motor_control_inst|Add0~110  = CARRY(( \motor_control_inst|count [23] ) + ( GND ) + ( \motor_control_inst|Add0~114  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count [23]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~114 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~109_sumout ),
+	.cout(\motor_control_inst|Add0~110 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~109 .extended_lut = "off";
+defparam \motor_control_inst|Add0~109 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \motor_control_inst|Add0~109 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y3_N11
+dffeas \motor_control_inst|count[23] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~109_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [23]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[23] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[23] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y3_N12
+cyclonev_lcell_comb \motor_control_inst|Add0~105 (
+// Equation(s):
+// \motor_control_inst|Add0~105_sumout  = SUM(( \motor_control_inst|count [24] ) + ( GND ) + ( \motor_control_inst|Add0~110  ))
+// \motor_control_inst|Add0~106  = CARRY(( \motor_control_inst|count [24] ) + ( GND ) + ( \motor_control_inst|Add0~110  ))
+
+	.dataa(gnd),
+	.datab(!\motor_control_inst|count [24]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~110 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~105_sumout ),
+	.cout(\motor_control_inst|Add0~106 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~105 .extended_lut = "off";
+defparam \motor_control_inst|Add0~105 .lut_mask = 64'h0000FFFF00003333;
+defparam \motor_control_inst|Add0~105 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y3_N14
+dffeas \motor_control_inst|count[24] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~105_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [24]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[24] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[24] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y3_N15
+cyclonev_lcell_comb \motor_control_inst|Add0~65 (
+// Equation(s):
+// \motor_control_inst|Add0~65_sumout  = SUM(( \motor_control_inst|count [25] ) + ( GND ) + ( \motor_control_inst|Add0~106  ))
+// \motor_control_inst|Add0~66  = CARRY(( \motor_control_inst|count [25] ) + ( GND ) + ( \motor_control_inst|Add0~106  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count [25]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~106 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~65_sumout ),
+	.cout(\motor_control_inst|Add0~66 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~65 .extended_lut = "off";
+defparam \motor_control_inst|Add0~65 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \motor_control_inst|Add0~65 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y3_N17
+dffeas \motor_control_inst|count[25] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~65_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [25]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[25] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[25] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y3_N18
+cyclonev_lcell_comb \motor_control_inst|Add0~101 (
+// Equation(s):
+// \motor_control_inst|Add0~101_sumout  = SUM(( \motor_control_inst|count [26] ) + ( GND ) + ( \motor_control_inst|Add0~66  ))
+// \motor_control_inst|Add0~102  = CARRY(( \motor_control_inst|count [26] ) + ( GND ) + ( \motor_control_inst|Add0~66  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count [26]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~66 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~101_sumout ),
+	.cout(\motor_control_inst|Add0~102 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~101 .extended_lut = "off";
+defparam \motor_control_inst|Add0~101 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \motor_control_inst|Add0~101 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y3_N20
+dffeas \motor_control_inst|count[26] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~101_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [26]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[26] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[26] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y3_N21
+cyclonev_lcell_comb \motor_control_inst|Add0~97 (
+// Equation(s):
+// \motor_control_inst|Add0~97_sumout  = SUM(( \motor_control_inst|count [27] ) + ( GND ) + ( \motor_control_inst|Add0~102  ))
+// \motor_control_inst|Add0~98  = CARRY(( \motor_control_inst|count [27] ) + ( GND ) + ( \motor_control_inst|Add0~102  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count [27]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~102 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~97_sumout ),
+	.cout(\motor_control_inst|Add0~98 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~97 .extended_lut = "off";
+defparam \motor_control_inst|Add0~97 .lut_mask = 64'h0000FFFF000000FF;
+defparam \motor_control_inst|Add0~97 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y3_N23
+dffeas \motor_control_inst|count[27] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~97_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [27]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[27] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[27] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y3_N24
+cyclonev_lcell_comb \motor_control_inst|Add0~93 (
+// Equation(s):
+// \motor_control_inst|Add0~93_sumout  = SUM(( \motor_control_inst|count [28] ) + ( GND ) + ( \motor_control_inst|Add0~98  ))
+// \motor_control_inst|Add0~94  = CARRY(( \motor_control_inst|count [28] ) + ( GND ) + ( \motor_control_inst|Add0~98  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count [28]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~98 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~93_sumout ),
+	.cout(\motor_control_inst|Add0~94 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~93 .extended_lut = "off";
+defparam \motor_control_inst|Add0~93 .lut_mask = 64'h0000FFFF00000F0F;
+defparam \motor_control_inst|Add0~93 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y3_N26
+dffeas \motor_control_inst|count[28] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~93_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [28]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[28] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[28] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y3_N27
+cyclonev_lcell_comb \motor_control_inst|Add0~89 (
+// Equation(s):
+// \motor_control_inst|Add0~89_sumout  = SUM(( \motor_control_inst|count [29] ) + ( GND ) + ( \motor_control_inst|Add0~94  ))
+// \motor_control_inst|Add0~90  = CARRY(( \motor_control_inst|count [29] ) + ( GND ) + ( \motor_control_inst|Add0~94  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count [29]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~94 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~89_sumout ),
+	.cout(\motor_control_inst|Add0~90 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~89 .extended_lut = "off";
+defparam \motor_control_inst|Add0~89 .lut_mask = 64'h0000FFFF000000FF;
+defparam \motor_control_inst|Add0~89 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y3_N29
+dffeas \motor_control_inst|count[29] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~89_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [29]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[29] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[29] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y3_N30
+cyclonev_lcell_comb \motor_control_inst|Add0~85 (
+// Equation(s):
+// \motor_control_inst|Add0~85_sumout  = SUM(( \motor_control_inst|count [30] ) + ( GND ) + ( \motor_control_inst|Add0~90  ))
+// \motor_control_inst|Add0~86  = CARRY(( \motor_control_inst|count [30] ) + ( GND ) + ( \motor_control_inst|Add0~90  ))
+
+	.dataa(gnd),
+	.datab(!\motor_control_inst|count [30]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~90 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~85_sumout ),
+	.cout(\motor_control_inst|Add0~86 ),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~85 .extended_lut = "off";
+defparam \motor_control_inst|Add0~85 .lut_mask = 64'h0000FFFF00003333;
+defparam \motor_control_inst|Add0~85 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y3_N32
+dffeas \motor_control_inst|count[30] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~85_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [30]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[30] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[30] .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X82_Y3_N33
+cyclonev_lcell_comb \motor_control_inst|Add0~125 (
+// Equation(s):
+// \motor_control_inst|Add0~125_sumout  = SUM(( \motor_control_inst|count [31] ) + ( GND ) + ( \motor_control_inst|Add0~86  ))
+
+	.dataa(!\motor_control_inst|count [31]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\motor_control_inst|Add0~86 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\motor_control_inst|Add0~125_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|Add0~125 .extended_lut = "off";
+defparam \motor_control_inst|Add0~125 .lut_mask = 64'h0000FFFF00005555;
+defparam \motor_control_inst|Add0~125 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X82_Y3_N35
+dffeas \motor_control_inst|count[31] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~125_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [31]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[31] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[31] .power_up = "low";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y4_N44
+cyclonev_io_ibuf \speed[0]~input (
+	.i(speed[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\speed[0]~input_o ));
+// synopsys translate_off
+defparam \speed[0]~input .bus_hold = "false";
+defparam \speed[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y4_N95
+cyclonev_io_ibuf \speed[1]~input (
+	.i(speed[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\speed[1]~input_o ));
+// synopsys translate_off
+defparam \speed[1]~input .bus_hold = "false";
+defparam \speed[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y4_N78
+cyclonev_io_ibuf \speed[2]~input (
+	.i(speed[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\speed[2]~input_o ));
+// synopsys translate_off
+defparam \speed[2]~input .bus_hold = "false";
+defparam \speed[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y6_N38
+cyclonev_io_ibuf \speed[3]~input (
+	.i(speed[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\speed[3]~input_o ));
+// synopsys translate_off
+defparam \speed[3]~input .bus_hold = "false";
+defparam \speed[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: DSP_X86_Y4_N0
+cyclonev_mac \motor_control_inst|Mult0~8 (
+	.sub(gnd),
+	.negate(gnd),
+	.accumulate(gnd),
+	.loadconst(gnd),
+	.ax({\speed[3]~input_o ,\speed[2]~input_o ,\speed[1]~input_o ,\speed[0]~input_o }),
+	.ay({vcc,vcc,gnd,vcc,gnd,gnd,gnd,gnd,gnd,vcc,gnd,vcc}),
+	.az(26'b00000000000000000000000000),
+	.bx(18'b000000000000000000),
+	.by(19'b0000000000000000000),
+	.bz(18'b000000000000000000),
+	.coefsela(3'b000),
+	.coefselb(3'b000),
+	.clk(3'b000),
+	.aclr(2'b00),
+	.ena(3'b111),
+	.scanin(27'b000000000000000000000000000),
+	.chainin(1'b0),
+	.dftout(),
+	.resulta(\motor_control_inst|Mult0~8_RESULTA_bus ),
+	.resultb(),
+	.scanout(),
+	.chainout());
+// synopsys translate_off
+defparam \motor_control_inst|Mult0~8 .accumulate_clock = "none";
+defparam \motor_control_inst|Mult0~8 .ax_clock = "none";
+defparam \motor_control_inst|Mult0~8 .ax_width = 4;
+defparam \motor_control_inst|Mult0~8 .ay_scan_in_clock = "none";
+defparam \motor_control_inst|Mult0~8 .ay_scan_in_width = 12;
+defparam \motor_control_inst|Mult0~8 .ay_use_scan_in = "false";
+defparam \motor_control_inst|Mult0~8 .az_clock = "none";
+defparam \motor_control_inst|Mult0~8 .bx_clock = "none";
+defparam \motor_control_inst|Mult0~8 .by_clock = "none";
+defparam \motor_control_inst|Mult0~8 .by_use_scan_in = "false";
+defparam \motor_control_inst|Mult0~8 .bz_clock = "none";
+defparam \motor_control_inst|Mult0~8 .coef_a_0 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_a_1 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_a_2 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_a_3 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_a_4 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_a_5 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_a_6 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_a_7 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_b_0 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_b_1 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_b_2 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_b_3 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_b_4 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_b_5 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_b_6 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_b_7 = 0;
+defparam \motor_control_inst|Mult0~8 .coef_sel_a_clock = "none";
+defparam \motor_control_inst|Mult0~8 .coef_sel_b_clock = "none";
+defparam \motor_control_inst|Mult0~8 .delay_scan_out_ay = "false";
+defparam \motor_control_inst|Mult0~8 .delay_scan_out_by = "false";
+defparam \motor_control_inst|Mult0~8 .enable_double_accum = "false";
+defparam \motor_control_inst|Mult0~8 .load_const_clock = "none";
+defparam \motor_control_inst|Mult0~8 .load_const_value = 0;
+defparam \motor_control_inst|Mult0~8 .mode_sub_location = 0;
+defparam \motor_control_inst|Mult0~8 .negate_clock = "none";
+defparam \motor_control_inst|Mult0~8 .operand_source_max = "input";
+defparam \motor_control_inst|Mult0~8 .operand_source_may = "input";
+defparam \motor_control_inst|Mult0~8 .operand_source_mbx = "input";
+defparam \motor_control_inst|Mult0~8 .operand_source_mby = "input";
+defparam \motor_control_inst|Mult0~8 .operation_mode = "m18x18_full";
+defparam \motor_control_inst|Mult0~8 .output_clock = "none";
+defparam \motor_control_inst|Mult0~8 .preadder_subtract_a = "false";
+defparam \motor_control_inst|Mult0~8 .preadder_subtract_b = "false";
+defparam \motor_control_inst|Mult0~8 .result_a_width = 64;
+defparam \motor_control_inst|Mult0~8 .signed_max = "false";
+defparam \motor_control_inst|Mult0~8 .signed_may = "false";
+defparam \motor_control_inst|Mult0~8 .signed_mbx = "false";
+defparam \motor_control_inst|Mult0~8 .signed_mby = "false";
+defparam \motor_control_inst|Mult0~8 .sub_clock = "none";
+defparam \motor_control_inst|Mult0~8 .use_chainadder = "false";
+// synopsys translate_on
+
+// Location: FF_X81_Y4_N35
+dffeas \motor_control_inst|speed[15] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~23 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [15]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[15] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[15] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X81_Y4_N23
+dffeas \motor_control_inst|speed[14] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~22 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [14]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[14] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[14] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X81_Y4_N14
+dffeas \motor_control_inst|speed[13] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~21 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [13]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[13] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[13] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X81_Y4_N56
+dffeas \motor_control_inst|speed[12] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~20 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [12]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[12] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[12] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X82_Y4_N44
+dffeas \motor_control_inst|count[14] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|Add0~9_sumout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(\motor_control_inst|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|count [14]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|count[14] .is_wysiwyg = "true";
+defparam \motor_control_inst|count[14] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y4_N57
+cyclonev_lcell_comb \motor_control_inst|LessThan1~0 (
+// Equation(s):
+// \motor_control_inst|LessThan1~0_combout  = ( \motor_control_inst|count [14] & ( \motor_control_inst|count [13] & ( (\motor_control_inst|speed [14] & (\motor_control_inst|speed [13] & (!\motor_control_inst|count [12] $ (\motor_control_inst|speed [12])))) ) 
+// ) ) # ( !\motor_control_inst|count [14] & ( \motor_control_inst|count [13] & ( (!\motor_control_inst|speed [14] & (\motor_control_inst|speed [13] & (!\motor_control_inst|count [12] $ (\motor_control_inst|speed [12])))) ) ) ) # ( \motor_control_inst|count 
+// [14] & ( !\motor_control_inst|count [13] & ( (\motor_control_inst|speed [14] & (!\motor_control_inst|speed [13] & (!\motor_control_inst|count [12] $ (\motor_control_inst|speed [12])))) ) ) ) # ( !\motor_control_inst|count [14] & ( 
+// !\motor_control_inst|count [13] & ( (!\motor_control_inst|speed [14] & (!\motor_control_inst|speed [13] & (!\motor_control_inst|count [12] $ (\motor_control_inst|speed [12])))) ) ) )
+
+	.dataa(!\motor_control_inst|speed [14]),
+	.datab(!\motor_control_inst|speed [13]),
+	.datac(!\motor_control_inst|count [12]),
+	.datad(!\motor_control_inst|speed [12]),
+	.datae(!\motor_control_inst|count [14]),
+	.dataf(!\motor_control_inst|count [13]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~0 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~0 .lut_mask = 64'h8008400420021001;
+defparam \motor_control_inst|LessThan1~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X81_Y4_N37
+dffeas \motor_control_inst|speed[11] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~19 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [11]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[11] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[11] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X81_Y4_N49
+dffeas \motor_control_inst|speed[10] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~18 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [10]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[10] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[10] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y4_N48
+cyclonev_lcell_comb \motor_control_inst|LessThan1~1 (
+// Equation(s):
+// \motor_control_inst|LessThan1~1_combout  = ( \motor_control_inst|count [10] & ( (\motor_control_inst|LessThan1~0_combout  & (\motor_control_inst|speed [10] & (!\motor_control_inst|count [11] $ (\motor_control_inst|speed [11])))) ) ) # ( 
+// !\motor_control_inst|count [10] & ( (\motor_control_inst|LessThan1~0_combout  & (!\motor_control_inst|speed [10] & (!\motor_control_inst|count [11] $ (\motor_control_inst|speed [11])))) ) )
+
+	.dataa(!\motor_control_inst|count [11]),
+	.datab(!\motor_control_inst|LessThan1~0_combout ),
+	.datac(!\motor_control_inst|speed [11]),
+	.datad(!\motor_control_inst|speed [10]),
+	.datae(gnd),
+	.dataf(!\motor_control_inst|count [10]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~1 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~1 .lut_mask = 64'h2100210000210021;
+defparam \motor_control_inst|LessThan1~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X81_Y4_N25
+dffeas \motor_control_inst|speed[5] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~13 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[5] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[5] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X81_Y4_N43
+dffeas \motor_control_inst|speed[4] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~12 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[4] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[4] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X81_Y4_N5
+dffeas \motor_control_inst|speed[6] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~14 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[6] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[6] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X81_Y4_N53
+dffeas \motor_control_inst|speed[7] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~15 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[7] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[7] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y4_N9
+cyclonev_lcell_comb \motor_control_inst|LessThan1~6 (
+// Equation(s):
+// \motor_control_inst|LessThan1~6_combout  = ( \motor_control_inst|speed [7] & ( (\motor_control_inst|count[7]~DUPLICATE_q  & (!\motor_control_inst|speed [6] $ (\motor_control_inst|count [6]))) ) ) # ( !\motor_control_inst|speed [7] & ( 
+// (!\motor_control_inst|count[7]~DUPLICATE_q  & (!\motor_control_inst|speed [6] $ (\motor_control_inst|count [6]))) ) )
+
+	.dataa(!\motor_control_inst|speed [6]),
+	.datab(!\motor_control_inst|count[7]~DUPLICATE_q ),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count [6]),
+	.datae(gnd),
+	.dataf(!\motor_control_inst|speed [7]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~6_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~6 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~6 .lut_mask = 64'h8844884422112211;
+defparam \motor_control_inst|LessThan1~6 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y4_N42
+cyclonev_lcell_comb \motor_control_inst|LessThan1~7 (
+// Equation(s):
+// \motor_control_inst|LessThan1~7_combout  = ( \motor_control_inst|LessThan1~6_combout  & ( (!\motor_control_inst|count[5]~DUPLICATE_q  & (!\motor_control_inst|speed [5] & (!\motor_control_inst|count [4] $ (\motor_control_inst|speed [4])))) # 
+// (\motor_control_inst|count[5]~DUPLICATE_q  & (\motor_control_inst|speed [5] & (!\motor_control_inst|count [4] $ (\motor_control_inst|speed [4])))) ) )
+
+	.dataa(!\motor_control_inst|count[5]~DUPLICATE_q ),
+	.datab(!\motor_control_inst|count [4]),
+	.datac(!\motor_control_inst|speed [5]),
+	.datad(!\motor_control_inst|speed [4]),
+	.datae(gnd),
+	.dataf(!\motor_control_inst|LessThan1~6_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~7_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~7 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~7 .lut_mask = 64'h0000000084218421;
+defparam \motor_control_inst|LessThan1~7 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X81_Y4_N41
+dffeas \motor_control_inst|speed[9] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~17 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [9]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[9] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[9] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y4_N51
+cyclonev_lcell_comb \motor_control_inst|LessThan1~2 (
+// Equation(s):
+// \motor_control_inst|LessThan1~2_combout  = ( \motor_control_inst|count[9]~DUPLICATE_q  & ( !\motor_control_inst|speed [9] ) ) # ( !\motor_control_inst|count[9]~DUPLICATE_q  & ( \motor_control_inst|speed [9] ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|speed [9]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\motor_control_inst|count[9]~DUPLICATE_q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~2 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~2 .lut_mask = 64'h0F0F0F0FF0F0F0F0;
+defparam \motor_control_inst|LessThan1~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X81_Y4_N46
+dffeas \motor_control_inst|speed[8] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~16 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [8]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[8] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[8] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y4_N45
+cyclonev_lcell_comb \motor_control_inst|LessThan1~3 (
+// Equation(s):
+// \motor_control_inst|LessThan1~3_combout  = !\motor_control_inst|count [8] $ (!\motor_control_inst|speed [8])
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\motor_control_inst|count [8]),
+	.datad(!\motor_control_inst|speed [8]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~3 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~3 .lut_mask = 64'h0FF00FF00FF00FF0;
+defparam \motor_control_inst|LessThan1~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X80_Y4_N26
+dffeas \motor_control_inst|speed[3] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~11 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[3] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[3] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X80_Y4_N8
+dffeas \motor_control_inst|speed[2] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~10 ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[2] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[2] .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X80_Y4_N14
+dffeas \motor_control_inst|speed[0] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\motor_control_inst|Mult0~8_resulta ),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[0] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[0] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y4_N15
+cyclonev_lcell_comb \motor_control_inst|speed[1]~feeder (
+// Equation(s):
+// \motor_control_inst|speed[1]~feeder_combout  = ( \motor_control_inst|Mult0~9  )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\motor_control_inst|Mult0~9 ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|speed[1]~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|speed[1]~feeder .extended_lut = "off";
+defparam \motor_control_inst|speed[1]~feeder .lut_mask = 64'h00000000FFFFFFFF;
+defparam \motor_control_inst|speed[1]~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X85_Y4_N16
+dffeas \motor_control_inst|speed[1] (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|speed[1]~feeder_combout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|speed [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|speed[1] .is_wysiwyg = "true";
+defparam \motor_control_inst|speed[1] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X80_Y4_N12
+cyclonev_lcell_comb \motor_control_inst|LessThan1~4 (
+// Equation(s):
+// \motor_control_inst|LessThan1~4_combout  = ( \motor_control_inst|speed [0] & ( \motor_control_inst|speed [1] & ( (!\motor_control_inst|count[0]~DUPLICATE_q ) # (!\motor_control_inst|count [1]) ) ) ) # ( !\motor_control_inst|speed [0] & ( 
+// \motor_control_inst|speed [1] & ( !\motor_control_inst|count [1] ) ) ) # ( \motor_control_inst|speed [0] & ( !\motor_control_inst|speed [1] & ( (!\motor_control_inst|count[0]~DUPLICATE_q  & !\motor_control_inst|count [1]) ) ) )
+
+	.dataa(gnd),
+	.datab(!\motor_control_inst|count[0]~DUPLICATE_q ),
+	.datac(gnd),
+	.datad(!\motor_control_inst|count [1]),
+	.datae(!\motor_control_inst|speed [0]),
+	.dataf(!\motor_control_inst|speed [1]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~4 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~4 .lut_mask = 64'h0000CC00FF00FFCC;
+defparam \motor_control_inst|LessThan1~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X80_Y4_N6
+cyclonev_lcell_comb \motor_control_inst|LessThan1~5 (
+// Equation(s):
+// \motor_control_inst|LessThan1~5_combout  = ( \motor_control_inst|speed [2] & ( \motor_control_inst|LessThan1~4_combout  & ( (!\motor_control_inst|count[3]~DUPLICATE_q ) # (\motor_control_inst|speed [3]) ) ) ) # ( !\motor_control_inst|speed [2] & ( 
+// \motor_control_inst|LessThan1~4_combout  & ( (!\motor_control_inst|speed [3] & (!\motor_control_inst|count[3]~DUPLICATE_q  & !\motor_control_inst|count[2]~DUPLICATE_q )) # (\motor_control_inst|speed [3] & ((!\motor_control_inst|count[3]~DUPLICATE_q ) # 
+// (!\motor_control_inst|count[2]~DUPLICATE_q ))) ) ) ) # ( \motor_control_inst|speed [2] & ( !\motor_control_inst|LessThan1~4_combout  & ( (!\motor_control_inst|speed [3] & (!\motor_control_inst|count[3]~DUPLICATE_q  & 
+// !\motor_control_inst|count[2]~DUPLICATE_q )) # (\motor_control_inst|speed [3] & ((!\motor_control_inst|count[3]~DUPLICATE_q ) # (!\motor_control_inst|count[2]~DUPLICATE_q ))) ) ) ) # ( !\motor_control_inst|speed [2] & ( 
+// !\motor_control_inst|LessThan1~4_combout  & ( (\motor_control_inst|speed [3] & !\motor_control_inst|count[3]~DUPLICATE_q ) ) ) )
+
+	.dataa(!\motor_control_inst|speed [3]),
+	.datab(!\motor_control_inst|count[3]~DUPLICATE_q ),
+	.datac(!\motor_control_inst|count[2]~DUPLICATE_q ),
+	.datad(gnd),
+	.datae(!\motor_control_inst|speed [2]),
+	.dataf(!\motor_control_inst|LessThan1~4_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~5 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~5 .lut_mask = 64'h4444D4D4D4D4DDDD;
+defparam \motor_control_inst|LessThan1~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y4_N6
+cyclonev_lcell_comb \motor_control_inst|LessThan1~8 (
+// Equation(s):
+// \motor_control_inst|LessThan1~8_combout  = ( \motor_control_inst|speed [7] & ( (!\motor_control_inst|count[7]~DUPLICATE_q ) # ((\motor_control_inst|speed [6] & !\motor_control_inst|count [6])) ) ) # ( !\motor_control_inst|speed [7] & ( 
+// (!\motor_control_inst|count[7]~DUPLICATE_q  & (\motor_control_inst|speed [6] & !\motor_control_inst|count [6])) ) )
+
+	.dataa(gnd),
+	.datab(!\motor_control_inst|count[7]~DUPLICATE_q ),
+	.datac(!\motor_control_inst|speed [6]),
+	.datad(!\motor_control_inst|count [6]),
+	.datae(gnd),
+	.dataf(!\motor_control_inst|speed [7]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~8_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~8 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~8 .lut_mask = 64'h0C000C00CFCCCFCC;
+defparam \motor_control_inst|LessThan1~8 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y4_N24
+cyclonev_lcell_comb \motor_control_inst|LessThan1~9 (
+// Equation(s):
+// \motor_control_inst|LessThan1~9_combout  = ( \motor_control_inst|speed [5] & ( !\motor_control_inst|LessThan1~8_combout  & ( (!\motor_control_inst|LessThan1~6_combout ) # ((\motor_control_inst|count[5]~DUPLICATE_q  & ((!\motor_control_inst|speed [4]) # 
+// (\motor_control_inst|count [4])))) ) ) ) # ( !\motor_control_inst|speed [5] & ( !\motor_control_inst|LessThan1~8_combout  & ( (!\motor_control_inst|speed [4]) # (((!\motor_control_inst|LessThan1~6_combout ) # (\motor_control_inst|count[5]~DUPLICATE_q )) # 
+// (\motor_control_inst|count [4])) ) ) )
+
+	.dataa(!\motor_control_inst|speed [4]),
+	.datab(!\motor_control_inst|count [4]),
+	.datac(!\motor_control_inst|count[5]~DUPLICATE_q ),
+	.datad(!\motor_control_inst|LessThan1~6_combout ),
+	.datae(!\motor_control_inst|speed [5]),
+	.dataf(!\motor_control_inst|LessThan1~8_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~9_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~9 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~9 .lut_mask = 64'hFFBFFF0B00000000;
+defparam \motor_control_inst|LessThan1~9 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y4_N30
+cyclonev_lcell_comb \motor_control_inst|LessThan1~10 (
+// Equation(s):
+// \motor_control_inst|LessThan1~10_combout  = ( \motor_control_inst|LessThan1~5_combout  & ( \motor_control_inst|LessThan1~9_combout  & ( (\motor_control_inst|LessThan1~1_combout  & (\motor_control_inst|LessThan1~7_combout  & 
+// (!\motor_control_inst|LessThan1~2_combout  & !\motor_control_inst|LessThan1~3_combout ))) ) ) ) # ( \motor_control_inst|LessThan1~5_combout  & ( !\motor_control_inst|LessThan1~9_combout  & ( (\motor_control_inst|LessThan1~1_combout  & 
+// (!\motor_control_inst|LessThan1~2_combout  & !\motor_control_inst|LessThan1~3_combout )) ) ) ) # ( !\motor_control_inst|LessThan1~5_combout  & ( !\motor_control_inst|LessThan1~9_combout  & ( (\motor_control_inst|LessThan1~1_combout  & 
+// (!\motor_control_inst|LessThan1~2_combout  & !\motor_control_inst|LessThan1~3_combout )) ) ) )
+
+	.dataa(!\motor_control_inst|LessThan1~1_combout ),
+	.datab(!\motor_control_inst|LessThan1~7_combout ),
+	.datac(!\motor_control_inst|LessThan1~2_combout ),
+	.datad(!\motor_control_inst|LessThan1~3_combout ),
+	.datae(!\motor_control_inst|LessThan1~5_combout ),
+	.dataf(!\motor_control_inst|LessThan1~9_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~10_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~10 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~10 .lut_mask = 64'h5000500000001000;
+defparam \motor_control_inst|LessThan1~10 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y4_N15
+cyclonev_lcell_comb \motor_control_inst|LessThan1~11 (
+// Equation(s):
+// \motor_control_inst|LessThan1~11_combout  = ( \motor_control_inst|count [14] & ( \motor_control_inst|count [13] & ( (\motor_control_inst|speed [12] & (!\motor_control_inst|count [12] & (\motor_control_inst|speed [13] & \motor_control_inst|speed [14]))) ) 
+// ) ) # ( !\motor_control_inst|count [14] & ( \motor_control_inst|count [13] & ( ((\motor_control_inst|speed [12] & (!\motor_control_inst|count [12] & \motor_control_inst|speed [13]))) # (\motor_control_inst|speed [14]) ) ) ) # ( \motor_control_inst|count 
+// [14] & ( !\motor_control_inst|count [13] & ( (\motor_control_inst|speed [14] & (((\motor_control_inst|speed [12] & !\motor_control_inst|count [12])) # (\motor_control_inst|speed [13]))) ) ) ) # ( !\motor_control_inst|count [14] & ( 
+// !\motor_control_inst|count [13] & ( (((\motor_control_inst|speed [12] & !\motor_control_inst|count [12])) # (\motor_control_inst|speed [14])) # (\motor_control_inst|speed [13]) ) ) )
+
+	.dataa(!\motor_control_inst|speed [12]),
+	.datab(!\motor_control_inst|count [12]),
+	.datac(!\motor_control_inst|speed [13]),
+	.datad(!\motor_control_inst|speed [14]),
+	.datae(!\motor_control_inst|count [14]),
+	.dataf(!\motor_control_inst|count [13]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~11_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~11 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~11 .lut_mask = 64'h4FFF004F04FF0004;
+defparam \motor_control_inst|LessThan1~11 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y4_N36
+cyclonev_lcell_comb \motor_control_inst|LessThan1~12 (
+// Equation(s):
+// \motor_control_inst|LessThan1~12_combout  = ( \motor_control_inst|speed [11] & ( !\motor_control_inst|LessThan1~11_combout  & ( (!\motor_control_inst|LessThan1~0_combout ) # ((\motor_control_inst|count [11] & ((!\motor_control_inst|speed [10]) # 
+// (\motor_control_inst|count [10])))) ) ) ) # ( !\motor_control_inst|speed [11] & ( !\motor_control_inst|LessThan1~11_combout  & ( ((!\motor_control_inst|speed [10]) # ((!\motor_control_inst|LessThan1~0_combout ) # (\motor_control_inst|count [10]))) # 
+// (\motor_control_inst|count [11]) ) ) )
+
+	.dataa(!\motor_control_inst|count [11]),
+	.datab(!\motor_control_inst|speed [10]),
+	.datac(!\motor_control_inst|count [10]),
+	.datad(!\motor_control_inst|LessThan1~0_combout ),
+	.datae(!\motor_control_inst|speed [11]),
+	.dataf(!\motor_control_inst|LessThan1~11_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~12_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~12 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~12 .lut_mask = 64'hFFDFFF4500000000;
+defparam \motor_control_inst|LessThan1~12 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y4_N18
+cyclonev_lcell_comb \motor_control_inst|LessThan1~13 (
+// Equation(s):
+// \motor_control_inst|LessThan1~13_combout  = ( \motor_control_inst|LessThan1~12_combout  & ( \motor_control_inst|count [8] & ( (!\motor_control_inst|LessThan1~1_combout ) # ((!\motor_control_inst|speed [9]) # (\motor_control_inst|count[9]~DUPLICATE_q )) ) 
+// ) ) # ( \motor_control_inst|LessThan1~12_combout  & ( !\motor_control_inst|count [8] & ( (!\motor_control_inst|LessThan1~1_combout ) # ((!\motor_control_inst|speed [9] & ((!\motor_control_inst|speed [8]) # (\motor_control_inst|count[9]~DUPLICATE_q ))) # 
+// (\motor_control_inst|speed [9] & (!\motor_control_inst|speed [8] & \motor_control_inst|count[9]~DUPLICATE_q ))) ) ) )
+
+	.dataa(!\motor_control_inst|LessThan1~1_combout ),
+	.datab(!\motor_control_inst|speed [9]),
+	.datac(!\motor_control_inst|speed [8]),
+	.datad(!\motor_control_inst|count[9]~DUPLICATE_q ),
+	.datae(!\motor_control_inst|LessThan1~12_combout ),
+	.dataf(!\motor_control_inst|count [8]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~13_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~13 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~13 .lut_mask = 64'h0000EAFE0000EEFF;
+defparam \motor_control_inst|LessThan1~13 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X81_Y4_N0
+cyclonev_lcell_comb \motor_control_inst|LessThan1~14 (
+// Equation(s):
+// \motor_control_inst|LessThan1~14_combout  = ( \motor_control_inst|count [15] & ( \motor_control_inst|LessThan1~13_combout  & ( ((\motor_control_inst|LessThan0~3_combout  & (\motor_control_inst|speed [15] & \motor_control_inst|LessThan1~10_combout ))) # 
+// (\motor_control_inst|count [31]) ) ) ) # ( !\motor_control_inst|count [15] & ( \motor_control_inst|LessThan1~13_combout  & ( ((\motor_control_inst|LessThan0~3_combout  & ((\motor_control_inst|LessThan1~10_combout ) # (\motor_control_inst|speed [15])))) # 
+// (\motor_control_inst|count [31]) ) ) ) # ( \motor_control_inst|count [15] & ( !\motor_control_inst|LessThan1~13_combout  & ( ((\motor_control_inst|LessThan0~3_combout  & \motor_control_inst|speed [15])) # (\motor_control_inst|count [31]) ) ) ) # ( 
+// !\motor_control_inst|count [15] & ( !\motor_control_inst|LessThan1~13_combout  & ( (\motor_control_inst|LessThan0~3_combout ) # (\motor_control_inst|count [31]) ) ) )
+
+	.dataa(!\motor_control_inst|count [31]),
+	.datab(!\motor_control_inst|LessThan0~3_combout ),
+	.datac(!\motor_control_inst|speed [15]),
+	.datad(!\motor_control_inst|LessThan1~10_combout ),
+	.datae(!\motor_control_inst|count [15]),
+	.dataf(!\motor_control_inst|LessThan1~13_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\motor_control_inst|LessThan1~14_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \motor_control_inst|LessThan1~14 .extended_lut = "off";
+defparam \motor_control_inst|LessThan1~14 .lut_mask = 64'h7777575757775557;
+defparam \motor_control_inst|LessThan1~14 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X81_Y4_N2
+dffeas \motor_control_inst|pwm (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\motor_control_inst|LessThan1~14_combout ),
+	.asdata(vcc),
+	.clrn(!\rst~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\motor_control_inst|pwm~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \motor_control_inst|pwm .is_wysiwyg = "true";
+defparam \motor_control_inst|pwm .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X3_Y32_N0
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule
