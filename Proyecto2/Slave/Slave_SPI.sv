@@ -7,7 +7,8 @@ module Slave_SPI(
 	output logic Z, 
 	output logic C, 
 	output logic V, 
-	output logic N
+	output logic N,
+	output logic speed
 	);
 	
 	reg [3:0] A = 4'b0001;
@@ -17,6 +18,8 @@ module Slave_SPI(
 	reg [3:0] result;
 	
 	ALU alu1 (.A(A), .B(B), .opcode(op), .result(result), .N(N), .V(V), .Z(Z), .C(C));
+	
+	PWM_module pwm1(.Porcentaje(result), .SLK(SLCK), .pwm(speed));
 	
 	bin_to_bcd bdc1(.A(result[3]), .B(result[2]), .C(result[1]), .D(result[0]), .display(display));
 
