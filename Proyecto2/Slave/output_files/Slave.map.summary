@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Thu May  9 16:04:28 2024
-Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Analysis & Elaboration Status : Successful - Thu May  9 21:53:18 2024
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : Slave
-Top-level Entity Name : ALU
+Top-level Entity Name : pwm
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
