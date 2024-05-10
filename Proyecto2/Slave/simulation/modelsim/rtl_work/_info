@@ -1,0 +1,221 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/simulation/modelsim
+vadder_n_bit
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1715292303
+!i10b 1
+!s100 N2EOOKchJ?2PmVZnozb`R3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I^70AM48J6eloeRY1DkO:X0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1715292185
+Z6 8C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/full_adder.sv
+Z7 FC:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/full_adder.sv
+!i122 1
+Z8 L0 29 19
+Z9 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z10 !s108 1715292302.000000
+Z11 !s107 C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/full_adder.sv|
+Z12 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave|C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/full_adder.sv|
+!i113 1
+Z13 o-sv -work work
+Z14 !s92 -sv -work work +incdir+C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave
+Z15 tCvgOpt 0
+vALU
+R1
+!s110 1715292302
+!i10b 1
+!s100 0zQVSK2B9aJ4LDg07HTVe2
+R3
+IIVzI4;bGdNLjb:hz@0Ck>2
+R4
+S1
+R0
+w1715292139
+8C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/ALU.sv
+FC:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/ALU.sv
+!i122 0
+L0 2 40
+R9
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave|C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/ALU.sv|
+!i113 1
+R13
+R14
+R15
+n@a@l@u
+vALU_tb
+R1
+R2
+!i10b 1
+!s100 C]`J33?bfT^cfK7oblofZ2
+R3
+I@Yj2RnP?oXbQ>L71KLeG>3
+R4
+S1
+R0
+w1715292164
+8C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/ALU_tb.sv
+FC:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/ALU_tb.sv
+!i122 3
+L0 1 52
+R9
+r1
+!s85 0
+31
+Z16 !s108 1715292303.000000
+!s107 C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/ALU_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave|C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/ALU_tb.sv|
+!i113 1
+R13
+R14
+R15
+n@a@l@u_tb
+vfull_adder
+R1
+R2
+!i10b 1
+!s100 FSXhGH8`1FW4Z><XN`DCP1
+R3
+I1zz^LL[E<Q9J;iI[;`2V?0
+R4
+S1
+R0
+R5
+R6
+R7
+!i122 1
+Z17 L0 14 12
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 1
+R13
+R14
+R15
+vfull_subtractor
+R1
+R2
+!i10b 1
+!s100 `5_jgAjH<^71@cE?VX?AC3
+R3
+I7V7BmI9bh=N?<13EgeS5U2
+R4
+S1
+R0
+Z18 w1715292202
+Z19 8C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/full_subtractor.sv
+Z20 FC:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/full_subtractor.sv
+!i122 2
+R17
+R9
+r1
+!s85 0
+31
+R16
+Z21 !s107 C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/full_subtractor.sv|
+Z22 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave|C:/Users/maest/Documents/TEC/github/Funda/ealfaro_compu_archi_found_2G1_2023/Proyecto2/Slave/full_subtractor.sv|
+!i113 1
+R13
+R14
+R15
+vhalf_adder
+R1
+R2
+!i10b 1
+!s100 aAB6aZ]zPa_TIf2mD7B5B2
+R3
+IOfi:M419JFz]oo?Q:lBSi2
+R4
+S1
+R0
+R5
+R6
+R7
+!i122 1
+Z23 L0 2 9
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 1
+R13
+R14
+R15
+vhalf_subtractor
+R1
+R2
+!i10b 1
+!s100 oVE9bX8YI_b^Bd7EUEH5]2
+R3
+IEzNPO^nHM;m2=4cQ]D6PM2
+R4
+S1
+R0
+R18
+R19
+R20
+!i122 2
+R23
+R9
+r1
+!s85 0
+31
+R16
+R21
+R22
+!i113 1
+R13
+R14
+R15
+vsubtractor_n_bit
+R1
+R2
+!i10b 1
+!s100 >hJe]GT?2^I9D1TPAa[Z>2
+R3
+I0HRV5>NlD2k:MR6^Om:O21
+R4
+S1
+R0
+R18
+R19
+R20
+!i122 2
+R8
+R9
+r1
+!s85 0
+31
+R16
+R21
+R22
+!i113 1
+R13
+R14
+R15
