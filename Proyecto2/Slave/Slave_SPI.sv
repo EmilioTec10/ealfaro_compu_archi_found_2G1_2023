@@ -11,7 +11,7 @@ module Slave_SPI(
 	output logic V, 
 	output logic N,
 	output logic speed,
-	output logic LED_MOSI
+	output logic LED_handshake,
 	);
 	
 	reg [3:0] A;
@@ -21,18 +21,25 @@ module Slave_SPI(
 	reg [3:0] result;
 	reg [3:0] SPI_result;
 	
+	reg [7:0] mosi;
+	reg [7:0] miso;
+	
 	
 	// Instancia del módulo SPI_Communication
 	SPI_Communication spi_communication (
 		 .CS(CS),
 		 .MOSI(MOSI),
 		 .SLCK(SLCK),
-		 .MISO(MISO),
+		 .miso(miso),
+		 .mosi(mosi),
 		 .num1(A), // Conecta los bits de display para num1
 		 .num2(B), // Conecta los bits de display para num2
 		 .operacion(op), // Conecta los bits de display para operacion
-		 .resultado(SPI_result) // Conecta las señales de resultado a N, V, Z, C
+		 .resultado(SPI_result), // Conecta las señales de resultado 
+		 .LED_handshake(LED_handshake)
 	);
+	
+	WriteToMaster wtm(.SCLK(SLCK), .CS(CS), .miso(miso), .MISO(MISO)); 
 	
 	ALU alu1 (.A(A), .B(B), .opcode(op), .result(result), .N(N), .V(V), .Z(Z), .C(C));
 	
@@ -42,8 +49,19 @@ module Slave_SPI(
 	
 	bin_to_bcd bdc2(.A(A[3]), .B(A[2]), .C(A[1]), .D(A[0]), .display(num1));
 	
-	bin_to_bcd bdc3(.A(B[3]), .B(B[2]), .C(B[1]), .D(B[0]), .display(num2));
+	bin_to_bcd bdc3(.A(B[7]), .B(B[6]), .C(B[5]), .D(B[4]), .display(num2));
 	
-	assign LED_MOSI = MOSI;
+	always @ (posedge SLCK & !CS) begin
+    mosi[7] <= mosi[6];
+    mosi[6] <= mosi[5];
+    mosi[5] <= mosi[4];
+    mosi[4] <= mosi[3];
+    mosi[3] <= mosi[2];
+    mosi[2] <= mosi[1];
+    mosi[1] <= mosi[0];
+    mosi[0] <= MOSI;
+    
+end
+
 
 endmodule 
