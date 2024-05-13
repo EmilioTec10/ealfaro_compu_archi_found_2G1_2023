@@ -46,13 +46,10 @@ set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name BOARD "DE1-SoC Board"
 set_location_assignment PIN_AE24 -to MOSI
-set_location_assignment PIN_AF26 -to MISO
-set_location_assignment PIN_AG26 -to SCLK
-set_global_assignment -name SYSTEMVERILOG_FILE Slave_SPI.sv
+set_location_assignment PIN_AF25 -to MISO
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_V16 -to LED1
 set_global_assignment -name SYSTEMVERILOG_FILE bin_to_bcd.sv
 set_location_assignment PIN_AE26 -to display[0]
 set_location_assignment PIN_AE27 -to display[1]
@@ -61,13 +58,46 @@ set_location_assignment PIN_AG27 -to display[3]
 set_location_assignment PIN_AF28 -to display[4]
 set_location_assignment PIN_AG28 -to display[5]
 set_location_assignment PIN_AH28 -to display[6]
-set_location_assignment PIN_Y21 -to LED[0]
-set_location_assignment PIN_W21 -to LED[1]
-set_location_assignment PIN_W20 -to LED[2]
-set_location_assignment PIN_Y19 -to LED[3]
-set_global_assignment -name SYSTEMVERILOG_FILE spi_byte_if.sv
-set_global_assignment -name SYSTEMVERILOG_FILE spi_pll.sv
-set_location_assignment PIN_AD24 -to SS
-set_location_assignment PIN_AF14 -to clk50Mhz
-set_location_assignment PIN_AH27 -to clkLocked
+set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Slave_SPI.sv
+set_global_assignment -name SYSTEMVERILOG_FILE full_adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE full_substractor.sv
+set_location_assignment PIN_AD24 -to CS
+set_location_assignment PIN_V16 -to C
+set_location_assignment PIN_W16 -to V
+set_location_assignment PIN_V17 -to N
+set_location_assignment PIN_V18 -to Z
+set_location_assignment PIN_AG26 -to SLCK
+set_global_assignment -name SYSTEMVERILOG_FILE PWM_module.sv
+set_location_assignment PIN_AE23 -to speed
+set_global_assignment -name SYSTEMVERILOG_FILE SPI_Communication.sv
+set_location_assignment PIN_AB23 -to num2[0]
+set_location_assignment PIN_AE29 -to num2[1]
+set_location_assignment PIN_AD29 -to num2[2]
+set_location_assignment PIN_AC28 -to num2[3]
+set_location_assignment PIN_AD30 -to num2[4]
+set_location_assignment PIN_AC29 -to num2[5]
+set_location_assignment PIN_AC30 -to num2[6]
+set_location_assignment PIN_AA24 -to num1[0]
+set_location_assignment PIN_Y23 -to num1[1]
+set_location_assignment PIN_Y24 -to num1[2]
+set_location_assignment PIN_W22 -to num1[3]
+set_location_assignment PIN_W24 -to num1[4]
+set_location_assignment PIN_V23 -to num1[5]
+set_location_assignment PIN_W25 -to num1[6]
+set_global_assignment -name SYSTEMVERILOG_FILE divideClock.sv
+set_location_assignment PIN_Y21 -to LED_handshake
+set_location_assignment PIN_W21 -to LED_MISO
+set_global_assignment -name SYSTEMVERILOG_FILE WriteToMaster.sv
+set_location_assignment PIN_AE11 -to A[0]
+set_location_assignment PIN_AC9 -to A[1]
+set_location_assignment PIN_AD10 -to A[2]
+set_location_assignment PIN_AE12 -to A[3]
+set_location_assignment PIN_AF9 -to B[0]
+set_location_assignment PIN_AF10 -to B[1]
+set_location_assignment PIN_AD11 -to B[2]
+set_location_assignment PIN_AD12 -to B[3]
+set_location_assignment PIN_AB12 -to op[0]
+set_location_assignment PIN_AC12 -to op[1]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
