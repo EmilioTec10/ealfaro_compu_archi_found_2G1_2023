@@ -22,6 +22,7 @@ typedef enum logic [3:0] {
 } state_t;
 
 reg [3:0] state = IDLE;
+reg [3:0] counter;
 
 always @(posedge SLCK) begin
     case (state)
@@ -43,15 +44,26 @@ always @(posedge SLCK) begin
             state <= RECEIVING_NUM1;
         end
         RECEIVING_NUM1: begin
-            num1 <= {num1[2:0], mosi};
-            state <= RECEIVING_NUM2;
+				if(counter == 3'b100)begin
+					counter <= 3'b000;
+					state <= RECEIVING_NUM2;
+				end else begin
+					num1 <= {num1[2:0], MOSI};
+					counter <= counter + 3'b001;
+            end
         end
         RECEIVING_NUM2: begin
-            num2 <= {num2[2:0], mosi};
-            state <= RECEIVING_OPERATION;
+            
+				if(counter == 3'b100)begin
+					state <= RECEIVING_OPERATION;
+					counter <= 3'b000;
+				end else begin
+					num2 <= {num2[2:0], MOSI};
+					counter <= counter + 3'b001;
+				end
         end
         RECEIVING_OPERATION: begin
-            operacion <= {operacion[0], mosi};
+            operacion <= {operacion[0], MOSI};
             state <= IDLE;
         end
         default: state <= IDLE;
@@ -59,4 +71,5 @@ always @(posedge SLCK) begin
 end
 
 endmodule
+
 

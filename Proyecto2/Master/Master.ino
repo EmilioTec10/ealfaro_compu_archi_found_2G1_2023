@@ -62,18 +62,22 @@ void loop() {
 
     digitalWrite(CS_PIN, LOW); // Activar dispositivo SPI
 
-    // Enviar num1
-    for (int i = sizeof(num1) - 1; i >= 0; i--) {
-      SPI.transfer((byte)(num1 >> (8 * i))); // Envía el byte i-ésimo de num1
-    }
+    // Dividir num1 en bytes y enviar cada byte
+    byte num1_bytes[2];
+    num1_bytes[0] = (byte)(num1 >> 8); // Byte más significativo
+    num1_bytes[1] = (byte)num1;        // Byte menos significativo
+    SPI.transfer(num1_bytes, 2);       // Enviar los dos bytes de num1
 
-    // Enviar num2
-    for (int i = sizeof(num2) - 1; i >= 0; i--) {
-      SPI.transfer((byte)(num2 >> (8 * i))); // Envía el byte i-ésimo de num2
-    }
+    // Dividir num2 en bytes y enviar cada byte
+    byte num2_bytes[2];
+    num2_bytes[0] = (byte)(num2 >> 8); // Byte más significativo
+    num2_bytes[1] = (byte)num2;        // Byte menos significativo
+    SPI.transfer(num2_bytes, 2);       // Enviar los dos bytes de num2
 
     // Enviar operacion
-    SPI.transfer((byte)operacion);   // Envía el byte de la operación
+    byte operacion_byte = (byte)operacion;
+    SPI.transfer(&operacion_byte, 1);  // Enviar el byte de operacion
+
 
     Serial.println(num1);
     Serial.println(num2);

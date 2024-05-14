@@ -90,4 +90,14 @@ set_global_assignment -name SYSTEMVERILOG_FILE divideClock.sv
 set_location_assignment PIN_Y21 -to LED_handshake
 set_location_assignment PIN_W21 -to LED_MISO
 set_global_assignment -name SYSTEMVERILOG_FILE WriteToMaster.sv
+set_location_assignment PIN_AE11 -to A[0]
+set_location_assignment PIN_AC9 -to A[1]
+set_location_assignment PIN_AD10 -to A[2]
+set_location_assignment PIN_AE12 -to A[3]
+set_location_assignment PIN_AF9 -to B[0]
+set_location_assignment PIN_AF10 -to B[1]
+set_location_assignment PIN_AD11 -to B[2]
+set_location_assignment PIN_AD12 -to B[3]
+set_location_assignment PIN_AB12 -to op[0]
+set_location_assignment PIN_AC12 -to op[1]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
