@@ -3,21 +3,21 @@ import time
 class InstructionMemory:
     def __init__(self, size):
         self.memory = ['00000000'] * size
-    
+
     def load_instructions(self, instructions):
         for i, instr in enumerate(instructions):
             self.memory[i] = instr
-    
+
     def fetch(self, address):
         return self.memory[address]
 
 class RegisterFile:
     def __init__(self):
         self.registers = [0] * 32
-    
+
     def read(self, reg_num):
         return self.registers[reg_num]
-    
+
     def write(self, reg_num, data):
         if reg_num != 0:  # El registro 0 siempre es 0
             self.registers[reg_num] = data
@@ -25,7 +25,7 @@ class RegisterFile:
 class ALU:
     def __init__(self):
         pass
-    
+
     def execute(self, operation, operand1, operand2):
         if operation == 'ADD':
             return operand1 + operand2
@@ -45,10 +45,10 @@ class ALU:
 class DataMemory:
     def __init__(self, size):
         self.memory = [0] * size
-    
+
     def load(self, address):
         return self.memory[address]
-    
+
     def store(self, address, data):
         self.memory[address] = data
 
@@ -81,7 +81,7 @@ class HazardUnit:
             self.forwardA = '10'
         elif mem_wb.rd != 0 and mem_wb.rd == id_ex.rs:
             self.forwardA = '01'
-        
+
         if ex_mem.rd != 0 and ex_mem.rd == id_ex.rt:
             self.forwardB = '10'
         elif mem_wb.rd != 0 and mem_wb.rd == id_ex.rt:
@@ -108,10 +108,10 @@ class SegmentadoProcessor:
         self.MEM_WB = PipelineRegister()
 
         self.hazard_unit = HazardUnit()
-    
+
     def load_instructions(self, instructions):
         self.im.load_instructions(instructions)
-    
+
     def fetch(self):
         if self.pc < len(self.im.memory) and self.im.memory[self.pc] != '00000000':
             instruction = self.im.fetch(self.pc)
@@ -125,10 +125,14 @@ class SegmentadoProcessor:
     def decode(self):
         instruction = self.IF_ID.instruction
         if instruction is not None:
+            self.ID_EX.instruction = instruction
             opcode = instruction[0:2]
+            print(instruction + " opcode: " + opcode)
             rs = int(instruction[2:4], 2)
             rt = int(instruction[4:6], 2)
             rd = int(instruction[6:8], 2)
+
+
 
             self.ID_EX.pc = self.IF_ID.pc
             self.ID_EX.rs = rs
@@ -137,16 +141,20 @@ class SegmentadoProcessor:
             self.ID_EX.stage = 'EX'
             self.ID_EX.operation = opcode
 
+            print("pepe: " + str(self.rf.read(1)))
             self.ID_EX.read_data = self.rf.read(rs)
             self.ID_EX.write_data = self.rf.read(rt)
         else:
             self.ID_EX.instruction = None
-    
+
     def execute(self):
         if self.ID_EX.instruction is not None:
             operation = self.ID_EX.operation
             operand1 = self.ID_EX.read_data
             operand2 = self.ID_EX.write_data
+
+            self.EX_MEM.instruction = self.ID_EX.instruction
+            self.EX_MEM.operation = operation
 
             if self.hazard_unit.forwardA == '10':
                 operand1 = self.EX_MEM.alu_result
@@ -163,20 +171,27 @@ class SegmentadoProcessor:
             elif operation == '01':  # SUB
                 self.EX_MEM.alu_result = self.alu.execute('SUB', operand1, operand2)
             elif operation == '10':  # LOAD
+                print("operand1: " + str(operand1))
+                print("operand2: " + str(operand2))
                 self.EX_MEM.alu_result = operand1 + operand2
             elif operation == '11':  # STORE
                 self.EX_MEM.alu_result = operand1 + operand2
+
 
             self.EX_MEM.stage = 'MEM'
             self.EX_MEM.rd = self.ID_EX.rd
         else:
             self.EX_MEM.instruction = None
-    
+
     def memory(self):
         if self.EX_MEM.instruction is not None:
+            self.MEM_WB.instruction = self.EX_MEM.instruction
             if self.EX_MEM.operation == '10':  # LOAD
+                print(self.EX_MEM.alu_result)
+                print(self.dm.load(self.EX_MEM.alu_result))
                 self.MEM_WB.alu_result = self.dm.load(self.EX_MEM.alu_result)
             elif self.EX_MEM.operation == '11':  # STORE
+                print("address: " + str(self.rf.read(self.EX_MEM.rd)) + " result: " + str(self.EX_MEM.alu_result))
                 self.dm.store(self.EX_MEM.alu_result, self.rf.read(self.EX_MEM.rd))
             else:
                 self.MEM_WB.alu_result = self.EX_MEM.alu_result
@@ -185,25 +200,27 @@ class SegmentadoProcessor:
             self.MEM_WB.rd = self.EX_MEM.rd
         else:
             self.MEM_WB.instruction = None
-    
+
     def write_back(self):
         if self.MEM_WB.instruction is not None:
+            print("rd: " + str(self.MEM_WB.rd) + " alu: " + str(self.MEM_WB.alu_result))
             self.rf.write(self.MEM_WB.rd, self.MEM_WB.alu_result)
 
     def execute_cycle(self):
         if self.start_time is None:
             self.start_time = time.time()
 
-        # Write Back
-        self.write_back()
-        # Memory
-        self.memory()
-        # Execute
-        self.execute()
-        # Decode
-        self.decode()
         # Fetch
         self.fetch()
+        # Decode
+        self.decode()
+        # Execute
+        self.execute()
+        # Memory
+        self.memory()
+        # Write Back
+        self.write_back()
+
 
         # Check hazards
         self.hazard_unit.detect_hazard(self.ID_EX, self.EX_MEM, self.MEM_WB)
@@ -215,24 +232,24 @@ class SegmentadoProcessor:
     def run(self, mode='complete', cycle_time=1):
         if self.start_time is None:
             self.start_time = time.time()
-        
+
         if mode == 'step':
             while self.pc < len(self.im.memory) and self.im.memory[self.pc] != '00000000':
                 self.execute_cycle()
                 self.print_statistics()
                 input("Press Enter to execute next cycle...")
-        
+
         elif mode == 'timed':
             while self.pc < len(self.im.memory) and self.im.memory[self.pc] != '00000000':
                 self.execute_cycle()
                 self.print_statistics()
                 time.sleep(cycle_time)
-        
+
         elif mode == 'complete':
             while self.pc < len(self.im.memory) and self.im.memory[self.pc] != '00000000':
                 self.execute_cycle()
             self.print_statistics()
-    
+
     def print_statistics(self):
         elapsed_time = time.time() - self.start_time
         print(f"Ciclo de ejecución: {self.cycle_count}")
@@ -283,7 +300,7 @@ instructions = [
     '10010111',  # LOAD R2, 6(R0)  -> Cargar B[1][0] en R2
     '11010110',  # MUL R3, R1, R2  -> Multiplicar R1 y R2 y almacenar en R3
     '00011110',  # ADD R3, R3, R4  -> Sumar R3 y R4 y almacenar en R3
-    '10111100',  # STORE 8(R0), R3 -> Almacenar el resultado en C[0][0]
+    '11111100',  # STORE 8(R0), R3 -> Almacenar el resultado en C[0][0]
 
     # Calcular C[0][1]
     '10000100',  # LOAD R1, 0(R0)  -> Cargar A[0][0] en R1
@@ -293,7 +310,7 @@ instructions = [
     '10010111',  # LOAD R2, 7(R0)  -> Cargar B[1][1] en R2
     '11010110',  # MUL R3, R1, R2  -> Multiplicar R1 y R2 y almacenar en R3
     '00011110',  # ADD R3, R3, R4  -> Sumar R3 y R4 y almacenar en R3
-    '10111101',  # STORE 9(R0), R3 -> Almacenar el resultado en C[0][1]
+    '11111101',  # STORE 9(R0), R3 -> Almacenar el resultado en C[0][1]
 
     # Calcular C[1][0]
     '10000110',  # LOAD R1, 2(R0)  -> Cargar A[1][0] en R1
@@ -303,7 +320,7 @@ instructions = [
     '10010101',  # LOAD R2, 5(R0)  -> Cargar B[0][1] en R2
     '11010110',  # MUL R3, R1, R2  -> Multiplicar R1 y R2 y almacenar en R3
     '00011110',  # ADD R3, R3, R4  -> Sumar R3 y R4 y almacenar en R3
-    '10111110',  # STORE 10(R0), R3 -> Almacenar el resultado en C[1][0]
+    '11111110',  # STORE 10(R0), R3 -> Almacenar el resultado en C[1][0]
 
     # Calcular C[1][1]
     '10000110',  # LOAD R1, 2(R0)  -> Cargar A[1][0] en R1
@@ -313,7 +330,7 @@ instructions = [
     '10010111',  # LOAD R2, 7(R0)  -> Cargar B[1][1] en R2
     '11010110',  # MUL R3, R1, R2  -> Multiplicar R1 y R2 y almacenar en R3
     '00011110',  # ADD R3, R3, R4  -> Sumar R3 y R4 y almacenar en R3
-    '10111111',  # STORE 11(R0), R3 -> Almacenar el resultado en C[1][1]
+    '11111111',  # STORE 11(R0), R3 -> Almacenar el resultado en C[1][1]
 ]
 
 # Cargar las instrucciones y ejecutar
