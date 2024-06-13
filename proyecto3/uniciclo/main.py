@@ -584,4 +584,3 @@ if __name__ == '__main__':
     window = CPUWindow()
     window.show()
     sys.exit(app.exec_())
-
